@@ -5,7 +5,7 @@
     <x:Property Name="out_Remarks" Type="OutArgument(x:String)" />
     <x:Property Name="out_BizExcpt" Type="OutArgument(x:Boolean)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1874,3822</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1874,2202</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,7 +108,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Remove Sales rep" sap:VirtualizedContainerService.HintSize="592,3677" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="Add Stagnant Carrier comment" sap:VirtualizedContainerService.HintSize="608,2137" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="CarrierCode" />
       <Variable x:TypeArguments="x:String" Name="CarrierName" />
@@ -120,7 +120,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Reset Variable values" sap:VirtualizedContainerService.HintSize="530,209" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+    <ui:MultipleAssign DisplayName="Reset Variable values" sap:VirtualizedContainerService.HintSize="546,209" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -158,14 +158,14 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Loggin Carrier code for reference" sap:VirtualizedContainerService.HintSize="530,141" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Started processing transaction with carrier code: &quot; + CarrierCode]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Working on Truck Entry Page" sap:VirtualizedContainerService.HintSize="530,3136" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Loggin Carrier code for reference" sap:VirtualizedContainerService.HintSize="546,141" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Started processing transaction with carrier code: &quot; + CarrierCode]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Working on Truck Entry Page" sap:VirtualizedContainerService.HintSize="546,1596" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2919" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1379" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="SelectorCarrierCode" />
             </Sequence.Variables>
@@ -175,7 +175,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check if Truck Entry page is already open" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Timeout="10" Version="V3">
+            <uix:NCheckState DisplayName="Check if Truck Entry page is already open" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Timeout="10" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -214,7 +214,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check if Carrier Editor window is open" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check if Compliance Editor window is open" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,455" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <sap:WorkflowViewStateService.ViewState>
@@ -261,7 +261,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Enter Carrier Code in search bar" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Text="[CarrierCode + &quot;[k(Enter)]&quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Enter Carrier Code in search bar" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Text="[CarrierCode + &quot;[k(Enter)]&quot;]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvElementArea="2352, 180, 170, 31" CvType="InputBox" DesignTimeRectangle="2354, 186, 167, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT CarrierSearchText'" FullSelectorArgument="&lt;webctrl id='CarrierSearchText' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='CarrierSearchText' tag='INPUT' type='text' class='md-text-field md-text-field--margin md-full-width md-text carrier-search-text' aaname='' /&gt;" Guid="69261bfb-96cb-4377-a2e7-e63b5d92f83c" InformativeScreenshot="49f73ca615994517fe7d9002a0e0c94a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -272,7 +272,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <Assign DisplayName="Get random delay duration" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Get random delay duration" sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[TimerDelay]</OutArgument>
               </Assign.To>
@@ -280,13 +280,13 @@
                 <InArgument x:TypeArguments="x:Int32">[New Random().Next(1, 5)]</InArgument>
               </Assign.Value>
             </Assign>
-            <Delay DisplayName="Delay timer" Duration="[TimeSpan.FromSeconds(TimerDelay)]" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <uix:NCheckState DisplayName="Check if no results window appears" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
+            <Delay DisplayName="Delay timer" Duration="[TimeSpan.FromSeconds(TimerDelay)]" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NCheckState DisplayName="Check if no results window appears" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="541,729" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -312,7 +312,7 @@
                       </scg:List>
                     </ui:MultipleAssign.AssignOperations>
                   </ui:MultipleAssign>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,143" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;No carrier code search results found.&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,143" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[out_Remarks]" />
                   <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Reload website" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(F5)][u(hk)]" Version="V3" />
                   <ui:Return DisplayName="Terminate workflow" sap:VirtualizedContainerService.HintSize="479,25" sap2010:WorkflowViewState.IdRef="Return_1" />
                 </Sequence>
@@ -342,7 +342,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check if results table exists" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
+            <uix:NCheckState DisplayName="Check if results table exists" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,547" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -412,68 +412,76 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <Assign DisplayName="Get random delay duration" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Int32">[TimerDelay]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Int32">[New Random().Next(1, 5)]</InArgument>
-              </Assign.Value>
-            </Assign>
-            <Delay DisplayName="Delay timer" Duration="[TimeSpan.FromSeconds(TimerDelay)]" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_5" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'COMPLIANCE' tab" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="898, 261, 83, 12" CvTextArgument="COMPLIANCE" CvType="Text" DesignTimeRectangle="900, 261, 79, 13" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'COMPLIANCE'" FullSelectorArgument="&lt;webctrl class='md-tab-label' parentid='compliance-tab' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='md-tab-label' parentid='compliance-tab' tag='DIV' type='' aaname='COMPLIANCE' check:innerText='COMPLIANCE' /&gt;" Guid="44ebcaf3-afd7-41c6-b365-3381db209e10" InformativeScreenshot="52827d2c52cf8f288e76569918d4ca3e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CvTextArea="1008, 261, 83, 12" CvTextArgument="ACCOUNTING" CvType="Text" DesignTimeRectangle="995, 250, 110, 38" ElementType="ListItem" FriendlyName="'ACCOUNTING'" FullSelectorArgument="&lt;webctrl id='accounting-tab' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='accounting-tab' tag='LI' type='' class='md-fake-btn md-pointer--hover md-fake-btn--no-outline md-tab md-tab--inactive tabs-card__tab-selector' aaname='' check:innerText='ACCOUNTING' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAqCAYAAABvAA/nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPoSURBVHhe7ZfJaxRBFMbn5NG7N8GbePIiKoooIh48CIKIuCCCiAgKLngQEVxQFETcV1xxibt/goio0Rj3JE4ymWQyyWSyTAwey/frmRo6bU+c2B3MFG/go6fqLVXvffVeVyeGh4eNovaRKBQKRlH7SEx60WQUtQ8l0hEokY5AiXQESqQjUCIdgRLpCJRIR6BEOgIl0hEokY5AiXQESqQjiJXIqa+T5nzXgHme/2n2p3r/kG9sypqb3QXzTORPBFeyg2bFl86yfPHHtDmd6fdk6NzNFcyOZI+Z/LLZk8+obzUH2/PmYe+QtwbPAzKe9iZpZr5rM9e7B80jmVv7vavs82ymuJ9tP3q8eeR1guW+dQ+JD3ROydr3c0XfYcCX1a3GHzqMg/smPtaa29BetomKWIlc+TVjHpQ2e1VIIgArWy9BEwiBXxCyLwoICLKWfuows96nzDUhAgIh5Ewpqehsl4RwSAge33d6Cp78ntgyPtHZb2Y3pKomkjH2HAB0bOKPd/R5YJ1L2QHzVOaIB13m9rb1hhJZyR86wX3z/0YpzsuBHEVBrERShQQPOY/zQ2aDVCDztlKRbW3pHqFPgPvkubs15wV3UkixFbhKDgbkU7k7pTJJ2i1JxrwPxZPMkzE6u5K5MRFpDwg6wQoCVhefVLudr0RkJX/2cPv3DXnnJB+3Zc5fyVEQG5FUFG2TKoIUAoMUZHOkhRAIMtqntZn+ttUbL2hsN8ekEoLJnPKqxSxsTJslomOTczidL8uBtTuS7quaSPZJNVMh+I9K5Gj+AP9tLsYLsRFJ9VGFtBiCISgqc5H8hyxIDBLphz/hYXKbHJ5h87TCaolkbk+pA2DvT7y1GwuRo/kD/GfObw+Ce42CWIikFXLiCIRqZM4//ltFkqjRKnK+tCTeT8jjqEjmaG+8o2jLHILg2mMlspI/wH9bkbRaSOeQTzgiaX2QxIaD4FJD2x3vdyQJYQ1a+ubm4hq8m1mfdbfIuv7EI18jY2ztXqMQWclf2DsSf2GHLgpiIdKSwCnjVgZosQRAYBBib62AwDm9JB2bZZ9H3lqRoYM9OnyChN3+eDLm1gr5XDbQ96+BP/vuCiYeG3+ri0pkmD/m2B9jDjt5sTd2bFd/myBE0lL41AhWGzgq7Y4AeDLe1Jz1kkpyCSTsO5JPE2T2YFT7HYkcPW6vdaXugB/88XmDPJh4YKvaJt7O/wuRIMwf+6P7+PdF7OvE3tpFRWyXHcX/hRLpCJRIR6BEOgIl0hEokY5AiXQESqQjUCIdgRLpCJRIR5CoH/plQJhQUTtQIh2BEukIlEhHoEQ6goTRnxM/JdKJnzG/Af08QUFLSLsCAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'edit' button" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" DesignTimeRectangle="1080, 305, 20, 20" DesignTimeScaleFactor="1" FriendlyName="'edit'" FullSelectorArgument="&lt;webctrl aaname='edit' parentid='tabs-card-panel-3' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='edit' parentid='tabs-card-panel-3' tag='I' type='' class='md-icon material-icons md-text--inherit' check:innerText='edit' /&gt;" Guid="e0a81c22-4807-4389-8eea-f418e429c521" InformativeScreenshot="6807d2683f7e11cb5884b1d306248155.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CvTextArea="1008, 261, 83, 12" CvTextArgument="ACCOUNTING" CvType="Text" DesignTimeRectangle="995, 250, 110, 38" ElementType="ListItem" FriendlyName="'ACCOUNTING'" FullSelectorArgument="&lt;webctrl id='accounting-tab' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='accounting-tab' tag='LI' type='' class='md-fake-btn md-pointer--hover md-fake-btn--no-outline md-tab md-tab--inactive tabs-card__tab-selector' aaname='' check:innerText='ACCOUNTING' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAqCAYAAABvAA/nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPoSURBVHhe7ZfJaxRBFMbn5NG7N8GbePIiKoooIh48CIKIuCCCiAgKLngQEVxQFETcV1xxibt/goio0Rj3JE4ymWQyyWSyTAwey/frmRo6bU+c2B3MFG/go6fqLVXvffVeVyeGh4eNovaRKBQKRlH7SEx60WQUtQ8l0hEokY5AiXQESqQjUCIdgRLpCJRIR6BEOgIl0hEokY5AiXQESqQjiJXIqa+T5nzXgHme/2n2p3r/kG9sypqb3QXzTORPBFeyg2bFl86yfPHHtDmd6fdk6NzNFcyOZI+Z/LLZk8+obzUH2/PmYe+QtwbPAzKe9iZpZr5rM9e7B80jmVv7vavs82ymuJ9tP3q8eeR1guW+dQ+JD3ROydr3c0XfYcCX1a3GHzqMg/smPtaa29BetomKWIlc+TVjHpQ2e1VIIgArWy9BEwiBXxCyLwoICLKWfuows96nzDUhAgIh5Ewpqehsl4RwSAge33d6Cp78ntgyPtHZb2Y3pKomkjH2HAB0bOKPd/R5YJ1L2QHzVOaIB13m9rb1hhJZyR86wX3z/0YpzsuBHEVBrERShQQPOY/zQ2aDVCDztlKRbW3pHqFPgPvkubs15wV3UkixFbhKDgbkU7k7pTJJ2i1JxrwPxZPMkzE6u5K5MRFpDwg6wQoCVhefVLudr0RkJX/2cPv3DXnnJB+3Zc5fyVEQG5FUFG2TKoIUAoMUZHOkhRAIMtqntZn+ttUbL2hsN8ekEoLJnPKqxSxsTJslomOTczidL8uBtTuS7quaSPZJNVMh+I9K5Gj+AP9tLsYLsRFJ9VGFtBiCISgqc5H8hyxIDBLphz/hYXKbHJ5h87TCaolkbk+pA2DvT7y1GwuRo/kD/GfObw+Ce42CWIikFXLiCIRqZM4//ltFkqjRKnK+tCTeT8jjqEjmaG+8o2jLHILg2mMlspI/wH9bkbRaSOeQTzgiaX2QxIaD4FJD2x3vdyQJYQ1a+ubm4hq8m1mfdbfIuv7EI18jY2ztXqMQWclf2DsSf2GHLgpiIdKSwCnjVgZosQRAYBBib62AwDm9JB2bZZ9H3lqRoYM9OnyChN3+eDLm1gr5XDbQ96+BP/vuCiYeG3+ri0pkmD/m2B9jDjt5sTd2bFd/myBE0lL41AhWGzgq7Y4AeDLe1Jz1kkpyCSTsO5JPE2T2YFT7HYkcPW6vdaXugB/88XmDPJh4YKvaJt7O/wuRIMwf+6P7+PdF7OvE3tpFRWyXHcX/hRLpCJRIR6BEOgIl0hEokY5AiXQESqQjUCIdgRLpCJRIR5CoH/plQJhQUTtQIh2BEukIlEhHoEQ6goTRnxM/JdKJnzG/Af08QUFLSLsCAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NGetText DelayBefore="2" DisplayName="Get Carrier Rep Name textbox value" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" TextString="[RecentNotes]" Version="V3">
-              <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="1440, 388, 136, 13" CvType="AnyWordGroup" DesignTimeRectangle="1441, 389, 296, 74" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA compliance-edi…'" FullSelectorArgument="&lt;webctrl id='compliance-editor-form-admin-hold-comments' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='compliance-editor-form-admin-hold-comments' tag='TEXTAREA' type='' class='md-text-field md-text-field--multiline md-full-width md-text' aaname='Admin Hold Comments' /&gt;" Guid="b6bc023b-d56c-4268-afda-7745ee46ef7f" InformativeScreenshot="bf476641376422f2ad7653f7a58195a4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CvTextArea="1440, 388, 136, 13" CvTextArgument="Admin Hold Comments" CvType="Text" DesignTimeRectangle="1441, 389, 135, 13" ElementType="Text" FriendlyName="'Admin Hold Comments'" FullSelectorArgument="&lt;webctrl aaname='Admin Hold Comments' parentid='compliance-editor-dialog' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Admin Hold Comments' parentid='compliance-editor-dialog' tag='LABEL' type='' class='md-floating-label md-floating-label--inactive md-floating-label--inactive-sized md-text--secondary' check:innerText='Admin Hold Comments' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAARCAYAAADt5F/aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR1SURBVGhD7ZjXSzVJEMX3n/ZRfBDEJ0VFBBVRVMwZIyYUzJjFhIo55xz741fcGvq2470ze3dXFubA4J2e7uqqU6eru/3LRIgQEJFYIgRGJJYIgZGSWB4fH011dbU5OzuLtQQHY+/u7mJv/x3wFZ+Z38Xb25tpamoyOzs7sZYINnzFcnl5aYqKisze3l6sxR+piGV8fNx0d3ebj4+PWEtyMF9paem3ZIbxIxWxXF9fm8bGRpORkSFPR0fHrwj+nwJxEi9xB4GvWKampkxxcbHp7e01n5+fsdbvSEUsfwe/KZb7+3tTVVVlFhYWhBP6Tk5Omvr6evP6+hrr9f9CymJ5enoyNTU1Zm1tTcihyii+vr7M+vq6ycnJMVlZWVIZysrKJAFK9MjIiKmoqDDp6emyCvf394VQ3mk/Pz8XW7Ozs6a/v19+43RdXZ0ZHh4Wu9hfXl6W+WwEFQu+jI6Oii2evr4+8/LyIt9csRwcHMjCoFK0tbVJPH5iwd/Ozs64xfPw8GDKy8slRkDl0VgLCgrM0tKSxBCWG+bHx4GBAY8PRDo3N+dxT2VWX9x49RuxksOJiYlv4+A+LS1NntzcXOkLJ+QULtw5wDexsPUQyPPzs1QWSFJgsKSkxOzu7oqRjY0NU1hYKO1KCJOx0khOQ0ODkH91dSX9x8bG5Du/XbHg3OrqqmeXJJAMG0HEQnIgrrm5WYSPL4hlcHBQbNNHxUK1qKysNCsrK/Lt6OhIkuwnFny1uXDBXCRmZmZGbLHIEMD29nZobpifBMIz8cBHZmammZ6e9mzDD/7a8WKXbZHFvrm5KbHm5eXJTvH+/m6Oj48lf7QD5rErC2ImTvre3NyI/9hRxIkFRxAIxgEd7TI7Pz/vBQTsJCkhNtEQp4IAtnOuWGynbbs2VCy6IuxHV4cmDSIVkEvb7e2t9FGxkIza2lqv6vjFALQ9kVhcW4DKogIJw43LB4sG/5UP20+/eJVbO1bgxufOQ97JN3whQmLRbyBOLHQiGScnJ/KuZVYPunaCQTKxuP1t51IRiz0HsPv7jbXbePhNmzuvXwwKfE0kFtcW0DYS6tpNxI1ry43J9pNvfguopaVFKonG6o4D7jxUlMXFRbGXnZ0tFUu/gTixEIA7KY8edMNWlt8Qy0+VhZJKybfFErSyAFZdojPLT5Wlvb1d2sJwk4wP20/iZds5PT2VbzbsWIEbnz0PlYSjh95OsctWSc4VnlgolRwyCdAGRLC3aglPdmZRR8BviMU9s2CTg6IK3iYwzJlFb0PaF7vchpiH3ypSPbNw2NU9n+9huEnGh22PubgYdHV1iQ+8k8Otra24WN1xgL8IDZEwDo7gjgqDwH8UC1sNxEGKDQZyS9CTPcHn5+fLiZkqA1k4FZaQf0ssADsErbeDRLehw8NDWQzcSFpbWyUe177C/j8Ldnt6ejw7INltKCg3yfhw7dnxal4Y48bqjqMyIhYOwRcXF/LO/440vqGhIe+8CuK2oQgREiESS4TAiMQSITAisUQICGP+ALR2AMVkFszdAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NGetText.Target>
-            </uix:NGetText>
-            <ui:ModifyText DisplayName="Remove blank spaces" sap:VirtualizedContainerService.HintSize="434,247" sap2010:WorkflowViewState.IdRef="ModifyText_5" OutputText="[RecentNotes]" SourceText="[RecentNotes]">
-              <ui:ModifyText.Body>
-                <ActivityAction>
-                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_27">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ucat:TrimTextModification DisplayName="Trim text" sap:VirtualizedContainerService.HintSize="334,53" sap2010:WorkflowViewState.IdRef="TrimTextModification_2" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:ModifyText.Body>
-            </ui:ModifyText>
-            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+            <Sequence DisplayName="Check if the audit comment is present" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_31">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="Get random delay duration" sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[TimerDelay]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[New Random().Next(1, 5)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Delay DisplayName="Delay timer" Duration="[TimeSpan.FromSeconds(TimerDelay)]" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_5" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'COMPLIANCE' tab" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="898, 261, 83, 12" CvTextArgument="COMPLIANCE" CvType="Text" DesignTimeRectangle="900, 261, 79, 13" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'COMPLIANCE'" FullSelectorArgument="&lt;webctrl class='md-tab-label' parentid='compliance-tab' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='md-tab-label' parentid='compliance-tab' tag='DIV' type='' aaname='COMPLIANCE' check:innerText='COMPLIANCE' /&gt;" Guid="44ebcaf3-afd7-41c6-b365-3381db209e10" InformativeScreenshot="52827d2c52cf8f288e76569918d4ca3e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target CvTextArea="1008, 261, 83, 12" CvTextArgument="ACCOUNTING" CvType="Text" DesignTimeRectangle="995, 250, 110, 38" ElementType="ListItem" FriendlyName="'ACCOUNTING'" FullSelectorArgument="&lt;webctrl id='accounting-tab' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='accounting-tab' tag='LI' type='' class='md-fake-btn md-pointer--hover md-fake-btn--no-outline md-tab md-tab--inactive tabs-card__tab-selector' aaname='' check:innerText='ACCOUNTING' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAqCAYAAABvAA/nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPoSURBVHhe7ZfJaxRBFMbn5NG7N8GbePIiKoooIh48CIKIuCCCiAgKLngQEVxQFETcV1xxibt/goio0Rj3JE4ymWQyyWSyTAwey/frmRo6bU+c2B3MFG/go6fqLVXvffVeVyeGh4eNovaRKBQKRlH7SEx60WQUtQ8l0hEokY5AiXQESqQjUCIdgRLpCJRIR6BEOgIl0hEokY5AiXQESqQjiJXIqa+T5nzXgHme/2n2p3r/kG9sypqb3QXzTORPBFeyg2bFl86yfPHHtDmd6fdk6NzNFcyOZI+Z/LLZk8+obzUH2/PmYe+QtwbPAzKe9iZpZr5rM9e7B80jmVv7vavs82ymuJ9tP3q8eeR1guW+dQ+JD3ROydr3c0XfYcCX1a3GHzqMg/smPtaa29BetomKWIlc+TVjHpQ2e1VIIgArWy9BEwiBXxCyLwoICLKWfuows96nzDUhAgIh5Ewpqehsl4RwSAge33d6Cp78ntgyPtHZb2Y3pKomkjH2HAB0bOKPd/R5YJ1L2QHzVOaIB13m9rb1hhJZyR86wX3z/0YpzsuBHEVBrERShQQPOY/zQ2aDVCDztlKRbW3pHqFPgPvkubs15wV3UkixFbhKDgbkU7k7pTJJ2i1JxrwPxZPMkzE6u5K5MRFpDwg6wQoCVhefVLudr0RkJX/2cPv3DXnnJB+3Zc5fyVEQG5FUFG2TKoIUAoMUZHOkhRAIMtqntZn+ttUbL2hsN8ekEoLJnPKqxSxsTJslomOTczidL8uBtTuS7quaSPZJNVMh+I9K5Gj+AP9tLsYLsRFJ9VGFtBiCISgqc5H8hyxIDBLphz/hYXKbHJ5h87TCaolkbk+pA2DvT7y1GwuRo/kD/GfObw+Ce42CWIikFXLiCIRqZM4//ltFkqjRKnK+tCTeT8jjqEjmaG+8o2jLHILg2mMlspI/wH9bkbRaSOeQTzgiaX2QxIaD4FJD2x3vdyQJYQ1a+ubm4hq8m1mfdbfIuv7EI18jY2ztXqMQWclf2DsSf2GHLgpiIdKSwCnjVgZosQRAYBBib62AwDm9JB2bZZ9H3lqRoYM9OnyChN3+eDLm1gr5XDbQ96+BP/vuCiYeG3+ri0pkmD/m2B9jDjt5sTd2bFd/myBE0lL41AhWGzgq7Y4AeDLe1Jz1kkpyCSTsO5JPE2T2YFT7HYkcPW6vdaXugB/88XmDPJh4YKvaJt7O/wuRIMwf+6P7+PdF7OvE3tpFRWyXHcX/hRLpCJRIR6BEOgIl0hEokY5AiXQESqQjUCIdgRLpCJRIR5CoH/plQJhQUTtQIh2BEukIlEhHoEQ6goTRnxM/JdKJnzG/Af08QUFLSLsCAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'edit' button" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" DesignTimeRectangle="1080, 305, 20, 20" DesignTimeScaleFactor="1" FriendlyName="'edit'" FullSelectorArgument="&lt;webctrl aaname='edit' parentid='tabs-card-panel-3' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='edit' parentid='tabs-card-panel-3' tag='I' type='' class='md-icon material-icons md-text--inherit' check:innerText='edit' /&gt;" Guid="e0a81c22-4807-4389-8eea-f418e429c521" InformativeScreenshot="6807d2683f7e11cb5884b1d306248155.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target CvTextArea="1008, 261, 83, 12" CvTextArgument="ACCOUNTING" CvType="Text" DesignTimeRectangle="995, 250, 110, 38" ElementType="ListItem" FriendlyName="'ACCOUNTING'" FullSelectorArgument="&lt;webctrl id='accounting-tab' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='accounting-tab' tag='LI' type='' class='md-fake-btn md-pointer--hover md-fake-btn--no-outline md-tab md-tab--inactive tabs-card__tab-selector' aaname='' check:innerText='ACCOUNTING' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAqCAYAAABvAA/nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPoSURBVHhe7ZfJaxRBFMbn5NG7N8GbePIiKoooIh48CIKIuCCCiAgKLngQEVxQFETcV1xxibt/goio0Rj3JE4ymWQyyWSyTAwey/frmRo6bU+c2B3MFG/go6fqLVXvffVeVyeGh4eNovaRKBQKRlH7SEx60WQUtQ8l0hEokY5AiXQESqQjUCIdgRLpCJRIR6BEOgIl0hEokY5AiXQESqQjiJXIqa+T5nzXgHme/2n2p3r/kG9sypqb3QXzTORPBFeyg2bFl86yfPHHtDmd6fdk6NzNFcyOZI+Z/LLZk8+obzUH2/PmYe+QtwbPAzKe9iZpZr5rM9e7B80jmVv7vavs82ymuJ9tP3q8eeR1guW+dQ+JD3ROydr3c0XfYcCX1a3GHzqMg/smPtaa29BetomKWIlc+TVjHpQ2e1VIIgArWy9BEwiBXxCyLwoICLKWfuows96nzDUhAgIh5Ewpqehsl4RwSAge33d6Cp78ntgyPtHZb2Y3pKomkjH2HAB0bOKPd/R5YJ1L2QHzVOaIB13m9rb1hhJZyR86wX3z/0YpzsuBHEVBrERShQQPOY/zQ2aDVCDztlKRbW3pHqFPgPvkubs15wV3UkixFbhKDgbkU7k7pTJJ2i1JxrwPxZPMkzE6u5K5MRFpDwg6wQoCVhefVLudr0RkJX/2cPv3DXnnJB+3Zc5fyVEQG5FUFG2TKoIUAoMUZHOkhRAIMtqntZn+ttUbL2hsN8ekEoLJnPKqxSxsTJslomOTczidL8uBtTuS7quaSPZJNVMh+I9K5Gj+AP9tLsYLsRFJ9VGFtBiCISgqc5H8hyxIDBLphz/hYXKbHJ5h87TCaolkbk+pA2DvT7y1GwuRo/kD/GfObw+Ce42CWIikFXLiCIRqZM4//ltFkqjRKnK+tCTeT8jjqEjmaG+8o2jLHILg2mMlspI/wH9bkbRaSOeQTzgiaX2QxIaD4FJD2x3vdyQJYQ1a+ubm4hq8m1mfdbfIuv7EI18jY2ztXqMQWclf2DsSf2GHLgpiIdKSwCnjVgZosQRAYBBib62AwDm9JB2bZZ9H3lqRoYM9OnyChN3+eDLm1gr5XDbQ96+BP/vuCiYeG3+ri0pkmD/m2B9jDjt5sTd2bFd/myBE0lL41AhWGzgq7Y4AeDLe1Jz1kkpyCSTsO5JPE2T2YFT7HYkcPW6vdaXugB/88XmDPJh4YKvaJt7O/wuRIMwf+6P7+PdF7OvE3tpFRWyXHcX/hRLpCJRIR6BEOgIl0hEokY5AiXQESqQjUCIdgRLpCJRIR5CoH/plQJhQUTtQIh2BEukIlEhHoEQ6goTRnxM/JdKJnzG/Af08QUFLSLsCAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NGetText DelayBefore="2" DisplayName="Get Admin Hold comments textbox value" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" TextString="[RecentNotes]" Version="V3">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="1440, 388, 136, 13" CvType="AnyWordGroup" DesignTimeRectangle="1441, 389, 296, 74" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA compliance-edi…'" FullSelectorArgument="&lt;webctrl id='compliance-editor-form-admin-hold-comments' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='compliance-editor-form-admin-hold-comments' tag='TEXTAREA' type='' class='md-text-field md-text-field--multiline md-full-width md-text' aaname='Admin Hold Comments' /&gt;" Guid="b6bc023b-d56c-4268-afda-7745ee46ef7f" InformativeScreenshot="bf476641376422f2ad7653f7a58195a4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target CvTextArea="1440, 388, 136, 13" CvTextArgument="Admin Hold Comments" CvType="Text" DesignTimeRectangle="1441, 389, 135, 13" ElementType="Text" FriendlyName="'Admin Hold Comments'" FullSelectorArgument="&lt;webctrl aaname='Admin Hold Comments' parentid='compliance-editor-dialog' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Admin Hold Comments' parentid='compliance-editor-dialog' tag='LABEL' type='' class='md-floating-label md-floating-label--inactive md-floating-label--inactive-sized md-text--secondary' check:innerText='Admin Hold Comments' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAARCAYAAADt5F/aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR1SURBVGhD7ZjXSzVJEMX3n/ZRfBDEJ0VFBBVRVMwZIyYUzJjFhIo55xz741fcGvq2470ze3dXFubA4J2e7uqqU6eru/3LRIgQEJFYIgRGJJYIgZGSWB4fH011dbU5OzuLtQQHY+/u7mJv/x3wFZ+Z38Xb25tpamoyOzs7sZYINnzFcnl5aYqKisze3l6sxR+piGV8fNx0d3ebj4+PWEtyMF9paem3ZIbxIxWxXF9fm8bGRpORkSFPR0fHrwj+nwJxEi9xB4GvWKampkxxcbHp7e01n5+fsdbvSEUsfwe/KZb7+3tTVVVlFhYWhBP6Tk5Omvr6evP6+hrr9f9CymJ5enoyNTU1Zm1tTcihyii+vr7M+vq6ycnJMVlZWVIZysrKJAFK9MjIiKmoqDDp6emyCvf394VQ3mk/Pz8XW7Ozs6a/v19+43RdXZ0ZHh4Wu9hfXl6W+WwEFQu+jI6Oii2evr4+8/LyIt9csRwcHMjCoFK0tbVJPH5iwd/Ozs64xfPw8GDKy8slRkDl0VgLCgrM0tKSxBCWG+bHx4GBAY8PRDo3N+dxT2VWX9x49RuxksOJiYlv4+A+LS1NntzcXOkLJ+QULtw5wDexsPUQyPPzs1QWSFJgsKSkxOzu7oqRjY0NU1hYKO1KCJOx0khOQ0ODkH91dSX9x8bG5Du/XbHg3OrqqmeXJJAMG0HEQnIgrrm5WYSPL4hlcHBQbNNHxUK1qKysNCsrK/Lt6OhIkuwnFny1uXDBXCRmZmZGbLHIEMD29nZobpifBMIz8cBHZmammZ6e9mzDD/7a8WKXbZHFvrm5KbHm5eXJTvH+/m6Oj48lf7QD5rErC2ImTvre3NyI/9hRxIkFRxAIxgEd7TI7Pz/vBQTsJCkhNtEQp4IAtnOuWGynbbs2VCy6IuxHV4cmDSIVkEvb7e2t9FGxkIza2lqv6vjFALQ9kVhcW4DKogIJw43LB4sG/5UP20+/eJVbO1bgxufOQ97JN3whQmLRbyBOLHQiGScnJ/KuZVYPunaCQTKxuP1t51IRiz0HsPv7jbXbePhNmzuvXwwKfE0kFtcW0DYS6tpNxI1ry43J9pNvfguopaVFKonG6o4D7jxUlMXFRbGXnZ0tFUu/gTixEIA7KY8edMNWlt8Qy0+VhZJKybfFErSyAFZdojPLT5Wlvb1d2sJwk4wP20/iZds5PT2VbzbsWIEbnz0PlYSjh95OsctWSc4VnlgolRwyCdAGRLC3aglPdmZRR8BviMU9s2CTg6IK3iYwzJlFb0PaF7vchpiH3ypSPbNw2NU9n+9huEnGh22PubgYdHV1iQ+8k8Otra24WN1xgL8IDZEwDo7gjgqDwH8UC1sNxEGKDQZyS9CTPcHn5+fLiZkqA1k4FZaQf0ssADsErbeDRLehw8NDWQzcSFpbWyUe177C/j8Ldnt6ejw7INltKCg3yfhw7dnxal4Y48bqjqMyIhYOwRcXF/LO/440vqGhIe+8CuK2oQgREiESS4TAiMQSITAisUQICGP+ALR2AMVkFszdAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <ui:ModifyText DisplayName="Remove blank spaces" sap:VirtualizedContainerService.HintSize="450,247" sap2010:WorkflowViewState.IdRef="ModifyText_5" OutputText="[RecentNotes]" SourceText="[RecentNotes]">
+                <ui:ModifyText.Body>
+                  <ActivityAction>
+                    <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ucat:TrimTextModification DisplayName="Trim text" sap:VirtualizedContainerService.HintSize="334,53" sap2010:WorkflowViewState.IdRef="TrimTextModification_2" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ModifyText.Body>
+              </ui:ModifyText>
+            </Sequence>
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
               <ui:IfElseIf.ConditionBlocks>
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" Condition="[RecentNotes.Contains(&quot;Stagnant Carrier - Audit required&quot;)]">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="541,598" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="541,703" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -503,7 +511,7 @@
                           </ui:MultipleAssign.AssignOperations>
                         </ui:MultipleAssign>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,143" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[out_Remarks]" />
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cancel'" sap:VirtualizedContainerService.HintSize="479,52" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cancel'" sap:VirtualizedContainerService.HintSize="479,157" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="1612, 1287, 55, 13" CvTextArgument="CANCEL" CvType="Text" DesignTimeRectangle="1596, 1279, 88, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;webctrl aaname='Cancel' parentid='compliance-editor-dialog' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cancel' parentid='compliance-editor-dialog' tag='BUTTON' type='button' class='md-btn md-btn--flat md-btn--text md-pointer--hover md-text md-inline-block compliance-editor__cancel-button' check:innerText='CANCEL' /&gt;" Guid="eae3ec9a-03a5-4c49-b78a-814da988440b" InformativeScreenshot="19aef34660cda445e8d5774435d80d21.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -515,7 +523,7 @@
                           </uix:NClick.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -526,10 +534,10 @@
                   </ui:IfElseIfBlock>
                   <ui:IfElseIfBlock BlockType="Else">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="541,410" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -560,40 +568,48 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:IfElseIf>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Stagnant carrier comment" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Text="[&quot;Stagnant Carrier - Audit required&quot; + Environment.NewLine + RecentNotes]" Version="V3">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="1440, 388, 136, 13" CvTextArgument="Admin Hold Comments" CvType="Text" DesignTimeRectangle="1441, 389, 296, 74" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA compliance-edi…'" FullSelectorArgument="&lt;webctrl id='compliance-editor-form-admin-hold-comments' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='compliance-editor-form-admin-hold-comments' tag='TEXTAREA' type='' class='md-text-field md-text-field--multiline md-full-width md-text' aaname='Admin Hold Comments' /&gt;" Guid="23aeb9bb-0e44-407f-b6a6-feebb1cfbc9d" InformativeScreenshot="403fd7a8004c88d7f89c0f9be7c2261c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CvTextArea="1440, 388, 136, 13" CvTextArgument="Admin Hold Comments" CvType="Text" DesignTimeRectangle="1441, 389, 135, 13" ElementType="Text" FriendlyName="'Admin Hold Comments'" FullSelectorArgument="&lt;webctrl aaname='Admin Hold Comments' parentid='compliance-editor-dialog' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Admin Hold Comments' parentid='compliance-editor-dialog' tag='LABEL' type='' class='md-floating-label md-floating-label--inactive md-floating-label--inactive-sized md-text--secondary' check:innerText='Admin Hold Comments' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAARCAYAAADt5F/aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR1SURBVGhD7ZjXSzVJEMX3n/ZRfBDEJ0VFBBVRVMwZIyYUzJjFhIo55xz741fcGvq2470ze3dXFubA4J2e7uqqU6eru/3LRIgQEJFYIgRGJJYIgZGSWB4fH011dbU5OzuLtQQHY+/u7mJv/x3wFZ+Z38Xb25tpamoyOzs7sZYINnzFcnl5aYqKisze3l6sxR+piGV8fNx0d3ebj4+PWEtyMF9paem3ZIbxIxWxXF9fm8bGRpORkSFPR0fHrwj+nwJxEi9xB4GvWKampkxxcbHp7e01n5+fsdbvSEUsfwe/KZb7+3tTVVVlFhYWhBP6Tk5Omvr6evP6+hrr9f9CymJ5enoyNTU1Zm1tTcihyii+vr7M+vq6ycnJMVlZWVIZysrKJAFK9MjIiKmoqDDp6emyCvf394VQ3mk/Pz8XW7Ozs6a/v19+43RdXZ0ZHh4Wu9hfXl6W+WwEFQu+jI6Oii2evr4+8/LyIt9csRwcHMjCoFK0tbVJPH5iwd/Ozs64xfPw8GDKy8slRkDl0VgLCgrM0tKSxBCWG+bHx4GBAY8PRDo3N+dxT2VWX9x49RuxksOJiYlv4+A+LS1NntzcXOkLJ+QULtw5wDexsPUQyPPzs1QWSFJgsKSkxOzu7oqRjY0NU1hYKO1KCJOx0khOQ0ODkH91dSX9x8bG5Du/XbHg3OrqqmeXJJAMG0HEQnIgrrm5WYSPL4hlcHBQbNNHxUK1qKysNCsrK/Lt6OhIkuwnFny1uXDBXCRmZmZGbLHIEMD29nZobpifBMIz8cBHZmammZ6e9mzDD/7a8WKXbZHFvrm5KbHm5eXJTvH+/m6Oj48lf7QD5rErC2ImTvre3NyI/9hRxIkFRxAIxgEd7TI7Pz/vBQTsJCkhNtEQp4IAtnOuWGynbbs2VCy6IuxHV4cmDSIVkEvb7e2t9FGxkIza2lqv6vjFALQ9kVhcW4DKogIJw43LB4sG/5UP20+/eJVbO1bgxufOQ97JN3whQmLRbyBOLHQiGScnJ/KuZVYPunaCQTKxuP1t51IRiz0HsPv7jbXbePhNmzuvXwwKfE0kFtcW0DYS6tpNxI1ry43J9pNvfguopaVFKonG6o4D7jxUlMXFRbGXnZ0tFUu/gTixEIA7KY8edMNWlt8Qy0+VhZJKybfFErSyAFZdojPLT5Wlvb1d2sJwk4wP20/iZds5PT2VbzbsWIEbnz0PlYSjh95OsctWSc4VnlgolRwyCdAGRLC3aglPdmZRR8BviMU9s2CTg6IK3iYwzJlFb0PaF7vchpiH3ypSPbNw2NU9n+9huEnGh22PubgYdHV1iQ+8k8Otra24WN1xgL8IDZEwDo7gjgqDwH8UC1sNxEGKDQZyS9CTPcHn5+fLiZkqA1k4FZaQf0ssADsErbeDRLehw8NDWQzcSFpbWyUe177C/j8Ldnt6ejw7INltKCg3yfhw7dnxal4Y48bqjqMyIhYOwRcXF/LO/440vqGhIe+8CuK2oQgREiESS4TAiMQSITAisUQICGP+ALR2AMVkFszdAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click on Submit button" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="1723, 1102, 49, 12" CvTextArgument="SUBMIT" CvType="Text" DesignTimeRectangle="1716, 1091, 64, 36" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl aaname='Submit' parentid='modal-confirmation' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Submit' parentid='modal-confirmation' tag='BUTTON' type='button' class='md-btn md-btn--flat md-btn--text md-pointer--hover md-text md-inline-block md-btn--dialog button__confirm' check:innerText='SUBMIT' /&gt;" Guid="b057df76-84df-4ad3-a4db-9dbcf4a23e6e" InformativeScreenshot="4c681cce71a4e0e3d301ebfa2bd1f882.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CvTextArea="1650, 1102, 51, 12" CvTextArgument="CANCEL" CvType="Text" DesignTimeRectangle="1643, 1091, 65, 36" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;webctrl parentid='modal-confirmation' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='modal-confirmation' tag='BUTTON' type='button' class='md-btn md-btn--flat md-btn--text md-pointer--hover md-text md-inline-block md-btn--dialog button__cancel' aaname='Cancel' check:innerText='CANCEL' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAAoCAYAAACo5zetAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJsSURBVGhD7ZbPK21RFMffn0jJgBDJ7wxIGIiRSBIZGJiYkZKJkaKIYsJEkkKRAVKESHze/bbP7p57rHff9Qaitz516p61z7l7rc/Ze53zC+cDLsXApRi4FAOXYuBSDFyKgUsxcCkGLsXApRi4FAOXYuBSDFyKweekvL7C4iLU1EBZGdTVwcoKvL0lFyTc3kJbGywvJ4GEmxtobISpqfBfEcU7O+HoKAnk2N+Hjg4oL4eKCpichPv7MDY/H+bPHtvb+Tn0+x8pXcr7OywsQFcXnJ+H8+NjaG6GtbXkogSd19ZCfz88PCTBHDFhFbm1lQRzZKUcHkJTE2xuBuF3dzA6CiMjQaak9PXB42O4Ps2XSrm+hvZ22NtLAglKcHAQXl7C+fMzDAzA0hL09MDuboiLmLAK0n9dXeXjUYpkj4/D7Gz4HdFYSwucnX0jKUpKiWvSYpychOsuL2FuLhQYi4sJr6/D0FB+G6WlqFAVXKyobyNFk2iyv0mRiLjMDw5Cb5EgkU744iJsEW2jtJRSirJ6SpT0pVJKWSlqsNoWscfEpx4bbjbh1dVwvXrIj1wpetqtrcV7ip663hbZp9jdHRpuNmGtpuHhcL9WlKQoppX2I3qKEtTbp7c3CNK53j4qZmMjX8z0dGExp6dhm2grWQlrG9XXQ1VVKFxo5UjAzk7h22diIszzbaQIJZT+TmloCE1TEtRgVXwsLKIxidLxp4S1jaqrC+9Nf6dUVsLMDDw9hTGrp+hQPM6RHRsbC/eWwOek/Ce4FAOXYuBSDFyKgUsxcCkGLsXApRi4FAOXYuBSDFyKgUsxcCkGLuUD8Bsl6DXDbgavfwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NGetText DelayAfter="4" DisplayName="Check Recent Notes section" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" TextString="[RecentNotes]" Version="V3">
-              <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" DesignTimeRectangle="744, 374, 368, 123" DesignTimeScaleFactor="1" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl class='compliance-tab__most-recent-note' parentid='tabs-card-panel-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='compliance-tab__most-recent-note' parentid='tabs-card-panel-3' tag='DIV' type='' aaname='' /&gt;" Guid="17116b45-e83e-4c1f-b908-f44efafdc5fe" InformativeScreenshot="1a6fecebe80bf7a9673488caad4fa79c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CvTextArea="743, 319, 121, 17" CvTextArgument="Recent Notes" CvType="Text" DesignTimeRectangle="744, 315, 368, 59" ElementType="Text" FriendlyName="'Recent Notes'" FullSelectorArgument="&lt;webctrl class='compliance-tab__recent-notes-title' parentid='tabs-card-panel-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='compliance-tab__recent-notes-title' parentid='tabs-card-panel-3' tag='DIV' type='' aaname='Recent Notes' check:innerText='Recent Notes' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXQAAAA/CAYAAADwizNIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAkFSURBVHhe7dtnaBRdFAZgf4goYgcbihrFHnsXsWGNXRR/KHZRsDfsHSuooLFhxwIqdrD3rrFjF0WxYe9dz5f3fHuX2XE3TuImMdf3gUFwZ+/MncA7Z87cTSVERJR4vnwRiY4WiYgQSRUbuc4tKkokJsa3459joBMRJZa4wrxrV5Fbt3w7hgcDnYgoMSRxmAMDnYgo3JIhzIGBTkQUTskU5sBAJyIKl2QMc2CgExGFy7p1IpGRyRLmwEAnIgqXYIGeRGEOAYF+8+ZNadSoUew5pPplK1KkiAwaNEhOnz4tnz598n0j5Xj37p1MmjRJcufOLbVq1ZKDBw/Kt2/ffJ8G+hL72LR48WIpXLiwZMqUScaOHSuPHj3yffo/57Vq2bKlXLhwwfeJN85jlCxZUjZu3JgirysRObgDPQnDHDwHutkKFSokS5YskdevX/u+lTIkNNAx53LlysnmzZsDApeBTkS/cAZ6Eoc5hAz05s2by9q1a+XAgQOyc+dOGTZsmOTLl08/a9CggRw/fly+f//u++bf708CHVunTp3k+vXr8vPnT92HgU5Ef5uQgd6jRw+5ffu27xORly9fypgxYyRnzpxStGhRDfsPHz7oZ2/evJENGzZIVFSUZMyYUffpGnt3Onr0aEBI/fjxQ65cuSLDhw/XIMuQIYNUqlRJ5s6dKw8fPvSHJXgZE1VzmTJlNBARjhinRo0aki1bNqldu7Zs2bJF3r9/79/PhLPZQgVxsEDPmzevzJ8/X169eqX7hAp0zOHevXsyffp0KV26tKRJk0aKFSumN5NbsXdr3ARxM8R5mrHN5rzReL1WGO/8+fMyYMAAKViwoO5XtmxZmTx5sv94RPRv8BzozpBDuC1YsEDbLo8fP5bRo0dr5esOqBIlSsiqVavk7du3GkAIsvr160vq1KkD9kubNq307t1bj4f9vI5pghrfz5o1q/7r3LdixYqyffv22KegdQkOdOfYdevWlcOHD2vgBgv0uOaIrV69evp9bHEFOo6/e/duqVmzZtBr1aVLFw17nMe2bdukfPnyAfuYrU2bNhr2uDkQkf08B/rHjx+1OoyIiPBX6Ah0hCtCFhV0//79NaxQGTdt2lTSp08vzZo1k5iYGK1ae/bsqS8ZK1euLMuWLdNqe/DgwRrcGBf/hycBr2Nu2rTJH9QYc9GiRRqIQ4cOlTx58mj4jR8/Xp4+fZrglkvx4sX1HCpUqKDjDRw4UOcSLNAfPHggvXr10jni/GfNmiWnTp2SmTNn+qt9c12dx3C3XO7cuSMdO3bUuVarVk2WL1+u40ycOFEKFCgguXLlkjlz5sjVq1elb9++kiVLFmnRooW+sMY8MS5eYufIkUNmz54tL1680HGJyG6eAh3hs3fvXm1joGI0PXQEmAmUDh06yLVr17RKxYaAQsuhVKlSWklv3bpVK2aEDALu+fPnOjaOiUDEuCNGjNBg9DqmqbwR3miHmBe1ly9f1moY80DAIiATGugI29WrV+s5o6WBm9maNWv0PN2BjncNmCMCfcqUKXojAbRpxo0bp0GMgEb1jVZQsEDHPHHzQtsEn+Hmhn0BK23wJJM5c2ad1/79+6V9+/aSLl26gGv17NkzOXPmjL7/wPVlb57o3xAy0ENtzlUuzuAMtaE9g8oelSKqRnc1ih4v2icIePyLYPQyJlo+K1eu1EB3toAg2I3pTwId54uwNFVz69at9WbSsGFDPQYCHQG6dOlSnSOq+vXr1/vniJYH9o+MjNTrt2LFCq2agwW680nIOWf3hmMeO3ZMbzR4WY2nB/TY0arC3DA+Wy1E/5Z4BTqqS/RsEToQ6uWec0PYoj1g2g7uQHfzOmZSBzrmjH48+tV46dq5c2d/7xrhinZHsIA2TL/fnCuq92D7O8/TOWf3Zp4KUI1PmzZN8ufPH/A5WjO4iZqnBCKyX8hAN8sW0UbA43327Nn91SVCB86dOyd16tTR/bt166arKoL5+vWrv3r9XaB7HRPcIZmYgY7zda70wdhmC2eFjpVDpup2jxMKxkdw79mzR4YMGaKratDCcv+9iMhunnrozqq5SZMmWo0iRO7fvy/du3fXpXKo3nft2qVhCGilIJwxBgLd9JfdPfS7d+/KyJEjtS+PVgNednodM6kDHc6ePSuNGzcOWH1iquVw9NCd4Y82Ctb/412FgRVApjK/dOmSLFy4UK+n+QUveuh4gYoVMjg3vJd48uSJ79tEZDNPgY52Q3R0tL4URLsBa6wRKAg+rEzBi0J8B2GFFRkIF7RZUGG2bdtWLl68GHSVi3PlhlnlgsrV65hmlUt8Ax3HwuqXEydO+NeVO8UV6O45YzOBntBVLrim/fr1k3379ul1vXHjhr7sRL/eudIHFThefmLFDb6L88eKH9z8MC6WMn7+/Fl27Nih/XScx9SpU3VMIrKfp0AH/EqyXbt2uqLCWTkjLCZMmKArTUzAmQ1BhR/GIMxROYZao41K1LkO3euY8anQUfnih0pYIWPGMkHsFlegA37Y06dPH12J4xwnrjliM+vQ8XQBhw4d0mtpPjdPDjg+Vqig9RRsnOrVq2to48dXuNmhxeLeBxvO48iRIyGfRIjILp4DHSFk1oc712MDqkIEPFaBoKWC0G3VqpUuvzMhCwhVVJGjRo3ScfALUFSS8+bN0yV5CETDy5jxCXRAAKK6xjHxYyH8nB/n4/a7QMd5InCrVq2qx3DeGPAZrktcvxQ1MEfMB8GL+eG9Bapu7GPGmTFjhlSpUkWrdYyD1g1uriak8Xc5efKk3mD4S1Gif1tAoBMRUcrFQCcisgQDnYjIEgx0IiJLMNCJiCzBQCcisgQDnYjIEgx0IiJLMNCJiCzBQCcisgQDnYjIEgx0IiJLMNCJiCzBQCcisgQDnYjIEgx0IiJLMNCJiCzBQCcisgQDnYjIEgx0IiJLMNCJiCzBQCcisgQDnYjIEgx0IiJLMNCJiCzBQCcisgQDnYjIEgx0IiJLMNCJiCzBQCcisgQDnYjIEgx0IiJLMNCJiCzBQCcisgQDnYjIEgx0IiJLMNCJiCzBQCcisgQDnYjIEgx0IiJLMNCJiKwg8h977XQNdJn30wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NGetText.Target>
-            </uix:NGetText>
-            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+            <Sequence DisplayName="Adding audit comment " sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_30">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Stagnant carrier comment" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Text="[&quot;Stagnant Carrier - Audit required&quot; + Environment.NewLine + RecentNotes]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="1440, 388, 136, 13" CvTextArgument="Admin Hold Comments" CvType="Text" DesignTimeRectangle="1441, 389, 296, 74" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA compliance-edi…'" FullSelectorArgument="&lt;webctrl id='compliance-editor-form-admin-hold-comments' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='compliance-editor-form-admin-hold-comments' tag='TEXTAREA' type='' class='md-text-field md-text-field--multiline md-full-width md-text' aaname='Admin Hold Comments' /&gt;" Guid="23aeb9bb-0e44-407f-b6a6-feebb1cfbc9d" InformativeScreenshot="403fd7a8004c88d7f89c0f9be7c2261c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target CvTextArea="1440, 388, 136, 13" CvTextArgument="Admin Hold Comments" CvType="Text" DesignTimeRectangle="1441, 389, 135, 13" ElementType="Text" FriendlyName="'Admin Hold Comments'" FullSelectorArgument="&lt;webctrl aaname='Admin Hold Comments' parentid='compliance-editor-dialog' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Admin Hold Comments' parentid='compliance-editor-dialog' tag='LABEL' type='' class='md-floating-label md-floating-label--inactive md-floating-label--inactive-sized md-text--secondary' check:innerText='Admin Hold Comments' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAARCAYAAADt5F/aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR1SURBVGhD7ZjXSzVJEMX3n/ZRfBDEJ0VFBBVRVMwZIyYUzJjFhIo55xz741fcGvq2470ze3dXFubA4J2e7uqqU6eru/3LRIgQEJFYIgRGJJYIgZGSWB4fH011dbU5OzuLtQQHY+/u7mJv/x3wFZ+Z38Xb25tpamoyOzs7sZYINnzFcnl5aYqKisze3l6sxR+piGV8fNx0d3ebj4+PWEtyMF9paem3ZIbxIxWxXF9fm8bGRpORkSFPR0fHrwj+nwJxEi9xB4GvWKampkxxcbHp7e01n5+fsdbvSEUsfwe/KZb7+3tTVVVlFhYWhBP6Tk5Omvr6evP6+hrr9f9CymJ5enoyNTU1Zm1tTcihyii+vr7M+vq6ycnJMVlZWVIZysrKJAFK9MjIiKmoqDDp6emyCvf394VQ3mk/Pz8XW7Ozs6a/v19+43RdXZ0ZHh4Wu9hfXl6W+WwEFQu+jI6Oii2evr4+8/LyIt9csRwcHMjCoFK0tbVJPH5iwd/Ozs64xfPw8GDKy8slRkDl0VgLCgrM0tKSxBCWG+bHx4GBAY8PRDo3N+dxT2VWX9x49RuxksOJiYlv4+A+LS1NntzcXOkLJ+QULtw5wDexsPUQyPPzs1QWSFJgsKSkxOzu7oqRjY0NU1hYKO1KCJOx0khOQ0ODkH91dSX9x8bG5Du/XbHg3OrqqmeXJJAMG0HEQnIgrrm5WYSPL4hlcHBQbNNHxUK1qKysNCsrK/Lt6OhIkuwnFny1uXDBXCRmZmZGbLHIEMD29nZobpifBMIz8cBHZmammZ6e9mzDD/7a8WKXbZHFvrm5KbHm5eXJTvH+/m6Oj48lf7QD5rErC2ImTvre3NyI/9hRxIkFRxAIxgEd7TI7Pz/vBQTsJCkhNtEQp4IAtnOuWGynbbs2VCy6IuxHV4cmDSIVkEvb7e2t9FGxkIza2lqv6vjFALQ9kVhcW4DKogIJw43LB4sG/5UP20+/eJVbO1bgxufOQ97JN3whQmLRbyBOLHQiGScnJ/KuZVYPunaCQTKxuP1t51IRiz0HsPv7jbXbePhNmzuvXwwKfE0kFtcW0DYS6tpNxI1ry43J9pNvfguopaVFKonG6o4D7jxUlMXFRbGXnZ0tFUu/gTixEIA7KY8edMNWlt8Qy0+VhZJKybfFErSyAFZdojPLT5Wlvb1d2sJwk4wP20/iZds5PT2VbzbsWIEbnz0PlYSjh95OsctWSc4VnlgolRwyCdAGRLC3aglPdmZRR8BviMU9s2CTg6IK3iYwzJlFb0PaF7vchpiH3ypSPbNw2NU9n+9huEnGh22PubgYdHV1iQ+8k8Otra24WN1xgL8IDZEwDo7gjgqDwH8UC1sNxEGKDQZyS9CTPcHn5+fLiZkqA1k4FZaQf0ssADsErbeDRLehw8NDWQzcSFpbWyUe177C/j8Ldnt6ejw7INltKCg3yfhw7dnxal4Y48bqjqMyIhYOwRcXF/LO/440vqGhIe+8CuK2oQgREiESS4TAiMQSITAisUQICGP+ALR2AMVkFszdAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click on Submit button" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="1723, 1102, 49, 12" CvTextArgument="SUBMIT" CvType="Text" DesignTimeRectangle="1716, 1091, 64, 36" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl aaname='Submit' parentid='modal-confirmation' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Submit' parentid='modal-confirmation' tag='BUTTON' type='button' class='md-btn md-btn--flat md-btn--text md-pointer--hover md-text md-inline-block md-btn--dialog button__confirm' check:innerText='SUBMIT' /&gt;" Guid="b057df76-84df-4ad3-a4db-9dbcf4a23e6e" InformativeScreenshot="4c681cce71a4e0e3d301ebfa2bd1f882.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="1650, 1102, 51, 12" CvTextArgument="CANCEL" CvType="Text" DesignTimeRectangle="1643, 1091, 65, 36" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;webctrl parentid='modal-confirmation' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='modal-confirmation' tag='BUTTON' type='button' class='md-btn md-btn--flat md-btn--text md-pointer--hover md-text md-inline-block md-btn--dialog button__cancel' aaname='Cancel' check:innerText='CANCEL' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAAoCAYAAACo5zetAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJsSURBVGhD7ZbPK21RFMffn0jJgBDJ7wxIGIiRSBIZGJiYkZKJkaKIYsJEkkKRAVKESHze/bbP7p57rHff9Qaitz516p61z7l7rc/Ze53zC+cDLsXApRi4FAOXYuBSDFyKgUsxcCkGLsXApRi4FAOXYuBSDFyKweekvL7C4iLU1EBZGdTVwcoKvL0lFyTc3kJbGywvJ4GEmxtobISpqfBfEcU7O+HoKAnk2N+Hjg4oL4eKCpichPv7MDY/H+bPHtvb+Tn0+x8pXcr7OywsQFcXnJ+H8+NjaG6GtbXkogSd19ZCfz88PCTBHDFhFbm1lQRzZKUcHkJTE2xuBuF3dzA6CiMjQaak9PXB42O4Ps2XSrm+hvZ22NtLAglKcHAQXl7C+fMzDAzA0hL09MDuboiLmLAK0n9dXeXjUYpkj4/D7Gz4HdFYSwucnX0jKUpKiWvSYpychOsuL2FuLhQYi4sJr6/D0FB+G6WlqFAVXKyobyNFk2iyv0mRiLjMDw5Cb5EgkU744iJsEW2jtJRSirJ6SpT0pVJKWSlqsNoWscfEpx4bbjbh1dVwvXrIj1wpetqtrcV7ip663hbZp9jdHRpuNmGtpuHhcL9WlKQoppX2I3qKEtTbp7c3CNK53j4qZmMjX8z0dGExp6dhm2grWQlrG9XXQ1VVKFxo5UjAzk7h22diIszzbaQIJZT+TmloCE1TEtRgVXwsLKIxidLxp4S1jaqrC+9Nf6dUVsLMDDw9hTGrp+hQPM6RHRsbC/eWwOek/Ce4FAOXYuBSDFyKgUsxcCkGLsXApRi4FAOXYuBSDFyKgUsxcCkGLuUD8Bsl6DXDbgavfwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NGetText DelayAfter="4" DisplayName="Check Recent Notes section" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" TextString="[RecentNotes]" Version="V3">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" DesignTimeRectangle="744, 374, 368, 123" DesignTimeScaleFactor="1" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl class='compliance-tab__most-recent-note' parentid='tabs-card-panel-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='compliance-tab__most-recent-note' parentid='tabs-card-panel-3' tag='DIV' type='' aaname='' /&gt;" Guid="17116b45-e83e-4c1f-b908-f44efafdc5fe" InformativeScreenshot="1a6fecebe80bf7a9673488caad4fa79c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target CvTextArea="743, 319, 121, 17" CvTextArgument="Recent Notes" CvType="Text" DesignTimeRectangle="744, 315, 368, 59" ElementType="Text" FriendlyName="'Recent Notes'" FullSelectorArgument="&lt;webctrl class='compliance-tab__recent-notes-title' parentid='tabs-card-panel-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='compliance-tab__recent-notes-title' parentid='tabs-card-panel-3' tag='DIV' type='' aaname='Recent Notes' check:innerText='Recent Notes' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+            </Sequence>
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
               <ui:IfElseIf.ConditionBlocks>
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" Condition="[RecentNotes.Contains(&quot;Stagnant Carrier - Audit required&quot;)]">
