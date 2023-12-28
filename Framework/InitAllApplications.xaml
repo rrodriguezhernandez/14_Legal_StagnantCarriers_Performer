@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1256,5723</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1874,5910</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -122,7 +122,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1266,5658" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1266,5845" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ArriveNow_Username" />
       <Variable x:TypeArguments="ss:SecureString" Name="ArriveNow_Password" />
@@ -143,20 +143,20 @@
       </Assign.Value>
     </Assign>
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;ArriveNow_CredentialName&quot;).ToString]" CacheStrategy="None" DisplayName="Get ArriveNow Credentials" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="1204,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ArriveNow_Password]" Username="[ArriveNow_Username]" />
-    <Sequence DisplayName="Open Arrive portal" sap:VirtualizedContainerService.HintSize="1204,5030" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence DisplayName="Open Arrive portal" sap:VirtualizedContainerService.HintSize="1204,5217" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Loggin into Arrive Portal" sap:VirtualizedContainerService.HintSize="1142,3238" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="7aa6c8e2-3267-4559-ab77-ef2742355273" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Loggin into Arrive Portal" sap:VirtualizedContainerService.HintSize="1142,3425" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="7aa6c8e2-3267-4559-ab77-ef2742355273" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1062,3021" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1062,3208" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -266,7 +266,7 @@
                 </uix:NClick>
               </Sequence>
               <Delay Duration="00:00:07" sap:VirtualizedContainerService.HintSize="1000,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
-              <uix:NCheckState DisplayName="Check if login was succesful" sap:VirtualizedContainerService.HintSize="1000,597" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="7aa6c8e2-3267-4559-ab77-ef2742355273" Timeout="10" Version="V3">
+              <uix:NCheckState DisplayName="Check if login was succesful" sap:VirtualizedContainerService.HintSize="1000,662" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="7aa6c8e2-3267-4559-ab77-ef2742355273" Timeout="10" Version="V3">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_15">
                     <sap:WorkflowViewStateService.ViewState>
@@ -278,7 +278,7 @@
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
-                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,380" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,445" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -293,6 +293,7 @@
                         <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                       </Assign.Value>
                     </Assign>
+                    <ui:Return DisplayName="Terminate workflow" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Return_1" />
                   </Sequence>
                 </uix:NCheckState.IfNotExists>
                 <uix:NCheckState.Target>
@@ -311,7 +312,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NCheckState>
-              <Sequence DisplayName="Navigate to ArriveNow" sap:VirtualizedContainerService.HintSize="1000,402" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <Sequence DisplayName="Navigate to ArriveNow" sap:VirtualizedContainerService.HintSize="1000,524" sap2010:WorkflowViewState.IdRef="Sequence_18">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -320,16 +321,17 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ARRIVEnow'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7aa6c8e2-3267-4559-ab77-ef2742355273" Version="V3">
                   <uix:NClick.Target>
-                    <uix:TargetAnchorable BrowserURL="https://portal.arrivelogistics.com/app/UserHome?iss=https%3A%2F%2Fportal.arrivelogistics.com&amp;session_hint=AUTHENTICATED" DesignTimeRectangle="615, 643, 140, 150" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'ARRIVEnow'" FullSelectorArgument="&lt;webctrl aria-label='launch app ARRIVEnow' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='launch app ARRIVEnow' tag='A' type='' class='chiclet a--no-decoration' aaname='ARRIVEnow' check:innerText='ARRIVEnow' /&gt;" Guid="ea87a3b4-7b87-40c5-b71a-46b68721c293" InformativeScreenshot="e3bf20cd5a30ee2eeb128391611d726b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Apps Dashboard | Arrive Logistics' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable BrowserURL="https://portal.arrivelogistics.com/app/UserHome?iss=https%3A%2F%2Fportal.arrivelogistics.com&amp;session_hint=AUTHENTICATED" DesignTimeRectangle="1108, 482, 140, 150" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'ARRIVEnow'" FullSelectorArgument="&lt;webctrl aria-label='launch app ARRIVEnow' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='launch app ARRIVEnow' tag='A' type='' class='chiclet a--no-decoration' aaname='ARRIVEnow' check:innerText='ARRIVEnow' /&gt;" Guid="ea87a3b4-7b87-40c5-b71a-46b68721c293" ImageBase64="" InformativeScreenshot="79c1f2d08d5a39b66108d4dea778f7f0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Apps Dashboard | Arrive Logistics' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
                         <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                          <uix:Target CvTextArea="1159, 536, 36, 12" CvTextArgument="now." CvType="Text" DesignTimeRectangle="661, 681, 48, 48" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='ARRIVEnow logo' parentid='main-content' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='ARRIVEnow logo' parentid='main-content' tag='IMG' type='' class='app-logo--image' /&gt;" ImageBase64="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" SearchSteps="Image" />
+                          <uix:Target CvTextArea="1159, 536, 36, 12" CvTextArgument="now." CvType="Text" DesignTimeRectangle="1152, 518, 52, 52" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='ARRIVEnow logo' parentid='main-content' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='ARRIVEnow logo' parentid='main-content' tag='IMG' type='' class='app-logo--image' /&gt;" ImageBase64="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" SearchSteps="Image" />
                         </scg:List>
                       </uix:TargetAnchorable.Anchors>
                     </uix:TargetAnchorable>
                   </uix:NClick.Target>
                 </uix:NClick>
-                <Delay DisplayName="Wait for ArriveNow window to load" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                <Delay DisplayName="Wait for ArriveNow window to load" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                <uix:NNavigateBrowser Action="CloseTab" DisplayName="Closing Arrive Portal tab" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
               </Sequence>
             </Sequence>
           </ActivityAction>
@@ -367,10 +369,10 @@
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;ArriveNow succesfully opened&quot;]" />
                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Truck Entry'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2949e484-4320-49e5-9553-e0afaf9c8c49" Version="V3">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/" DesignTimeRectangle="526, 415, 26, 21" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl idx='2' parentid='home-module' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='home-module' tag='path' class='' aaname='' /&gt;" Guid="d809879e-a643-4596-a862-85abd3c33c9a" InformativeScreenshot="825c182b686178b225e5a500a0a32dca.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Accelerate' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/" DesignTimeRectangle="937, 467, 26, 21" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl idx='2' parentid='home-module' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='home-module' tag='path' class='' aaname='' /&gt;" Guid="d809879e-a643-4596-a862-85abd3c33c9a" InformativeScreenshot="5cd42ec023cb4b9b657028766fc1b5bc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Accelerate' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target CvTextArea="493, 496, 89, 18" CvTextArgument="Truck Entry" CvType="Text" DesignTimeRectangle="488, 493, 100, 24" ElementType="Text" FriendlyName="'Truck Entry'" FullSelectorArgument="&lt;webctrl idx='2' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='MuiTypography-root MuiTypography-body1 css-1rmrb7v-MuiTypography-root' aaname='Truck Entry' check:innerText='Truck Entry' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAcCAYAAACNr/p2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALcSURBVGhD7Zchc+JAGIbvj4SpwtWAA3NXdZgDU1cwxxlaQ89ATQ9Df0FOcQoUqKBSlSpQoECByilQoMC9t7tZIEkTknCk3c7sM5MZdiHJfvt83+7yCRKhkYIERwoSHClIcKQgwZGCBEcKEpwQgpbQyhdQEgFXuYcFvyMerHF815a8HZJRw3u87GpgxH8mKidV0Eglwalj3nor/kdQCdqZsuetY5eCIiIF+SKCoDnaxY8qiE1EAwOzj8fi5X59X2glj/1pDJXsAapjA9hipjdQzdN7yfMzBdTaQ6z4t56CzB4q6SSuVfvvXIQUZMU0hKk/4CZDPieS+Hz7B5Pdg9lzaP/h2o/FK/bNCx7TXgm1hn5/gdSvF2x4zzHOLCiLb/UOZrbZCidoi4l6BSX/AGOxtbpWU3Rvk7ZAXIKYnEtUu/PjgXpM7O6yJwiLKZ1D0+DP38yhkfcr932H/Cixm90ClK9UFu+gmB3cJAromrwdwJkFvc7UUIJWfVRJgK0Jb++gEmgWswBtgpicKzQH7uz0wGdcblhMLhnWvXcwbJ1RYsdmiCapoqq+5h1bDJ5I0tWf/SvexdmXOMeqRQglyOdeJ1zQU4PIIe/PuzLTjyiCQkx8lNgpVhX9Bss9v0Q8wocTpGR+QDOt5SdUJr6zoEMVLTFpZV9XaQCxC1oZd2Rtd/XTDTTMEkf6a0W6L9GGaw9a9NkBoaL9tdp+vLcgAquifA7X6SyJme+xIYldEFbPqNGJ7E555qwxUHNIkayyb9KTNunL/4Ruug4J+ypxCSIs9BJSQRvumQWxKih34HhlgKBdFSlF130hiF8QYTPr8eMnOV5+KaE1GrPJrpCyt2MaEY/ZRLZRJyetY/sRGxd5nud1GG9YQdhM0S5bY9yPP0gQT9LmIFr1UE4SJIkGW+JOqB6KFBQ37A9rEjVjd9SOhhQUM45j9glIQYIjBQmOFCQ4UpDgSEGCIwUJDfAPBUo6CSNosy4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="493, 496, 89, 18" CvTextArgument="Truck Entry" CvType="Text" DesignTimeRectangle="900, 545, 100, 24" ElementType="Text" FriendlyName="'Truck Entry'" FullSelectorArgument="&lt;webctrl idx='2' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='MuiTypography-root MuiTypography-body1 css-1rmrb7v-MuiTypography-root' aaname='Truck Entry' check:innerText='Truck Entry' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAcCAYAAACNr/p2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALcSURBVGhD7Zchc+JAGIbvj4SpwtWAA3NXdZgDU1cwxxlaQ89ATQ9Df0FOcQoUqKBSlSpQoECByilQoMC9t7tZIEkTknCk3c7sM5MZdiHJfvt83+7yCRKhkYIERwoSHClIcKQgwZGCBEcKEpwQgpbQyhdQEgFXuYcFvyMerHF815a8HZJRw3u87GpgxH8mKidV0Eglwalj3nor/kdQCdqZsuetY5eCIiIF+SKCoDnaxY8qiE1EAwOzj8fi5X59X2glj/1pDJXsAapjA9hipjdQzdN7yfMzBdTaQ6z4t56CzB4q6SSuVfvvXIQUZMU0hKk/4CZDPieS+Hz7B5Pdg9lzaP/h2o/FK/bNCx7TXgm1hn5/gdSvF2x4zzHOLCiLb/UOZrbZCidoi4l6BSX/AGOxtbpWU3Rvk7ZAXIKYnEtUu/PjgXpM7O6yJwiLKZ1D0+DP38yhkfcr932H/Cixm90ClK9UFu+gmB3cJAromrwdwJkFvc7UUIJWfVRJgK0Jb++gEmgWswBtgpicKzQH7uz0wGdcblhMLhnWvXcwbJ1RYsdmiCapoqq+5h1bDJ5I0tWf/SvexdmXOMeqRQglyOdeJ1zQU4PIIe/PuzLTjyiCQkx8lNgpVhX9Bss9v0Q8wocTpGR+QDOt5SdUJr6zoEMVLTFpZV9XaQCxC1oZd2Rtd/XTDTTMEkf6a0W6L9GGaw9a9NkBoaL9tdp+vLcgAquifA7X6SyJme+xIYldEFbPqNGJ7E555qwxUHNIkayyb9KTNunL/4Ruug4J+ypxCSIs9BJSQRvumQWxKih34HhlgKBdFSlF130hiF8QYTPr8eMnOV5+KaE1GrPJrpCyt2MaEY/ZRLZRJyetY/sRGxd5nud1GG9YQdhM0S5bY9yPP0gQT9LmIFr1UE4SJIkGW+JOqB6KFBQ37A9rEjVjd9SOhhQUM45j9glIQYIjBQmOFCQ4UpDgSEGCIwUJDfAPBUo6CSNosy4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
