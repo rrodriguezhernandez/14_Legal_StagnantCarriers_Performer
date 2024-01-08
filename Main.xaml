@@ -1196,7 +1196,7 @@
                                                       <scg:List x:TypeArguments="uga:DynamicField" Capacity="5">
                                                         <uga:DynamicField Id="707d6bac-689a-46c3-9102-987e03f45ac8" Name="dynamicField_AddRangeProperty_20">
                                                           <uga:DynamicField.ArgumentValue>
-                                                            <InArgument x:TypeArguments="x:Object">[System.DateTime.Now.ToString]</InArgument>
+                                                            <InArgument x:TypeArguments="x:Object">[System.DateTime.Now.ToString("d/M/yyyy")]</InArgument>
                                                           </uga:DynamicField.ArgumentValue>
                                                         </uga:DynamicField>
                                                         <uga:DynamicField Id="740ffaac-a6a8-43cb-a8d0-1221cf2e8513" Name="dynamicField_AddRangeProperty_21">
