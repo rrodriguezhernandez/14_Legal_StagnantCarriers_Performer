@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,864</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,904</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,6 +65,7 @@
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>UiPath.GSuite.Activities.Enums</x:String>
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -260,7 +261,7 @@
           <Transition.To>
             <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried ." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="231,188" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="579,1191" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="642,1358" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -398,7 +399,7 @@
                     </Sequence>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="545,21" sap2010:WorkflowViewState.IdRef="Catch`1_9">
+                    <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="608,21" sap2010:WorkflowViewState.IdRef="Catch`1_9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -503,7 +504,7 @@
                         </Sequence>
                       </ActivityAction>
                     </Catch>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="545,21" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="608,21" sap2010:WorkflowViewState.IdRef="Catch`1_10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -603,222 +604,295 @@
                     </Catch>
                   </TryCatch.Catches>
                   <TryCatch.Finally>
-                    <Sequence sap:VirtualizedContainerService.HintSize="541,941" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                    <Sequence sap:VirtualizedContainerService.HintSize="604,1108" sap2010:WorkflowViewState.IdRef="Sequence_46">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uga:WriteRowConnections ArrayRow="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DataRow="{x:Null}" RowPosition="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="37abbd01-4f4c-45fb-8efd-72e7568e6a7d" DataType="IndividualFields" DisplayName="Write Row" HasHeaders="True" sap:VirtualizedContainerService.HintSize="479,643" sap2010:WorkflowViewState.IdRef="WriteRowConnections_7" ItemSelectionMode="UrlOrId" ManualEntrySpreadsheetId="[CurrReportFilePath.ID]" Range="ExecutionReport" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
-                        <uga:WriteRowConnections.AllFields>
-                          <x:Array Type="ugsc:IRangeField">
-                            <ugsmc:RangeColumn DisplayName="Column 1" Guid="7178feb3-fdad-403b-bc0e-f825eee40b85" Name="Column 1">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 2" Guid="0aaacec9-c168-4d7a-a45e-a287a6360514" Name="Column 2">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 3" Guid="3bc1a6aa-adfc-4f42-aa3c-b318fb49f945" Name="Column 3">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 4" Guid="2b137c43-1565-4872-926e-ad68f508f117" Name="Column 4">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 5" Guid="070eb98e-e9c8-4dd1-927f-8e89e934a676" Name="Column 5">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 6" Guid="c5843474-9e71-4abb-9d63-fe8c77b3da83" Name="Column 6">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 7" Guid="9a1e3baf-349e-4df6-bd1c-387a41ea6393" Name="Column 7">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 8" Guid="d8d80062-ac46-468c-9842-50478cb58305" Name="Column 8">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 9" Guid="edde40f4-79e7-4687-848b-1d11993ed1c1" Name="Column 9">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 10" Guid="e26a2ee6-22bb-4264-b4c9-2be68d91dfa9" Name="Column 10">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 11" Guid="94d3e3ea-d0f5-40fd-b871-406f6c1580c2" Name="Column 11">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 12" Guid="5fbbde9b-35d4-4d69-956f-4cd53902283a" Name="Column 12">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 13" Guid="1694b269-e6ff-41e3-bc8b-9c0177ba123e" Name="Column 13">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 14" Guid="95113228-7c51-4c9a-8945-83d73018d08b" Name="Column 14">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 15" Guid="7b74afe0-3c15-4e2d-866a-0733d5ef96ba" Name="Column 15">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 16" Guid="6261bb74-468f-4859-a2c0-6dfaf8415504" Name="Column 16">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 17" Guid="4ea27215-65e0-48f3-9c7b-719a0ac51d78" Name="Column 17">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 18" Guid="43a15dd0-25dd-4ba3-8c2d-05b97b3c1a92" Name="Column 18">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 19" Guid="21c473a2-77f6-4760-8f07-6dff1299fae3" Name="Column 19">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 20" Guid="a1d743d9-3194-4562-81d6-653279d65425" Name="Column 20">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 21" Guid="0d954aa7-73e1-4acf-96d1-deb8c8bd32fd" Name="Column 21">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 22" Guid="d4b36ce4-5400-402a-a69b-c359b2bd7f1c" Name="Column 22">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 23" Guid="5dd42ec0-258a-4992-89e0-0c467e6e3436" Name="Column 23">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 24" Guid="fb6cbfd8-865f-47e2-9b56-4d7ed26eeae4" Name="Column 24">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 25" Guid="a459abb4-ceb5-4331-8f23-d9a38334397a" Name="Column 25">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                            <ugsmc:RangeColumn DisplayName="Column 26" Guid="c57ee454-6e4a-4499-b6ac-bf145ccac0c8" Name="Column 26">
-                              <ugsmc:RangeColumn.Sample>
-                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                              </ugsmc:RangeColumn.Sample>
-                            </ugsmc:RangeColumn>
-                          </x:Array>
-                        </uga:WriteRowConnections.AllFields>
-                        <uga:WriteRowConnections.FileIdBackup>
-                          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="UrlOrId">
-                            <usau:BackupSlot.BackupValues>
-                              <scg:List x:TypeArguments="x:Object" x:Key="UrlOrId" Capacity="1">
-                                <InArgument x:TypeArguments="x:String">[CurrReportFilePath.ID]</InArgument>
-                              </scg:List>
-                              <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
-                                <x:Null />
-                              </scg:List>
-                            </usau:BackupSlot.BackupValues>
-                          </usau:BackupSlot>
-                        </uga:WriteRowConnections.FileIdBackup>
-                        <uga:WriteRowConnections.InputDataTypeBackup>
-                          <usau:BackupSlot x:TypeArguments="ugase:InputDataType" StoredValue="IndividualFields">
-                            <usau:BackupSlot.BackupValues>
-                              <scg:List x:TypeArguments="x:Object" x:Key="DataRow" Capacity="1">
-                                <x:Null />
-                              </scg:List>
-                              <scg:List x:TypeArguments="x:Object" x:Key="ArrayRow" Capacity="1">
-                                <x:Null />
-                              </scg:List>
-                            </usau:BackupSlot.BackupValues>
-                          </usau:BackupSlot>
-                        </uga:WriteRowConnections.InputDataTypeBackup>
-                        <uga:WriteRowConnections.RangeWriteModeBackup>
-                          <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
-                            <usau:BackupSlot.BackupValues>
-                              <scg:List x:TypeArguments="x:Object" x:Key="Append" Capacity="1">
-                                <x:String></x:String>
-                              </scg:List>
-                              <scg:List x:TypeArguments="x:Object" x:Key="Insert" Capacity="1">
-                                <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                              </scg:List>
-                              <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
-                                <x:Null />
-                              </scg:List>
-                            </usau:BackupSlot.BackupValues>
-                          </usau:BackupSlot>
-                        </uga:WriteRowConnections.RangeWriteModeBackup>
-                        <uga:WriteRowConnections.State>
-                          <uga:ActivityState>
-                            <uga:ActivityState.SelectedFields>
-                              <scg:List x:TypeArguments="uga:DynamicField" Capacity="5">
-                                <uga:DynamicField Id="7178feb3-fdad-403b-bc0e-f825eee40b85" Name="dynamicField_AddRangeProperty_20">
-                                  <uga:DynamicField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:Object">[TransactionID]</InArgument>
-                                  </uga:DynamicField.ArgumentValue>
-                                </uga:DynamicField>
-                                <uga:DynamicField Id="0aaacec9-c168-4d7a-a45e-a287a6360514" Name="dynamicField_AddRangeProperty_21">
-                                  <uga:DynamicField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:Object">[TransactionItem.SpecificContent("CarrierCode").ToString]</InArgument>
-                                  </uga:DynamicField.ArgumentValue>
-                                </uga:DynamicField>
-                                <uga:DynamicField Id="3bc1a6aa-adfc-4f42-aa3c-b318fb49f945" Name="dynamicField_AddRangeProperty_22">
-                                  <uga:DynamicField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:Object">[TransactionItem.SpecificContent("CarrierName").ToString]</InArgument>
-                                  </uga:DynamicField.ArgumentValue>
-                                </uga:DynamicField>
-                                <uga:DynamicField Id="2b137c43-1565-4872-926e-ad68f508f117" Name="dynamicField_AddRangeProperty_23">
-                                  <uga:DynamicField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:Object">[CurrentTransactionStatus]</InArgument>
-                                  </uga:DynamicField.ArgumentValue>
-                                </uga:DynamicField>
-                                <uga:DynamicField Id="070eb98e-e9c8-4dd1-927f-8e89e934a676" Name="dynamicField_AddRangeProperty_24">
-                                  <uga:DynamicField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:Object">[Remarks]</InArgument>
-                                  </uga:DynamicField.ArgumentValue>
-                                </uga:DynamicField>
-                              </scg:List>
-                            </uga:ActivityState.SelectedFields>
-                          </uga:ActivityState>
-                        </uga:WriteRowConnections.State>
-                      </uga:WriteRowConnections>
-                      <ui:MultipleAssign DisplayName="Update variable values" sap:VirtualizedContainerService.HintSize="479,147" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                      <ui:RetryScope DisplayName="Update Report file" sap:VirtualizedContainerService.HintSize="542,810" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="5" RetryInterval="00:00:03">
+                        <ui:RetryScope.ActivityBody>
+                          <ActivityAction>
+                            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="500,521" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign DisplayName="Reset boolean value" sap:VirtualizedContainerService.HintSize="438,82" sap2010:WorkflowViewState.IdRef="Assign_38">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[ExceptionFound]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,288" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <TryCatch.Try>
+                                  <uga:WriteRowConnections ArrayRow="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DataRow="{x:Null}" RowPosition="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="6fd82878-44d7-43f4-bbf0-a01d6fb2942c" DataType="IndividualFields" DisplayName="Write Row" HasHeaders="True" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="WriteRowConnections_7" ItemSelectionMode="UrlOrId" ManualEntrySpreadsheetId="[CurrReportFilePath.ID]" Range="ExecutionReport" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+                                    <uga:WriteRowConnections.AllFields>
+                                      <x:Array Type="ugsc:IRangeField">
+                                        <ugsmc:RangeColumn DisplayName="Column 1" Guid="7178feb3-fdad-403b-bc0e-f825eee40b85" Name="Column 1">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 2" Guid="0aaacec9-c168-4d7a-a45e-a287a6360514" Name="Column 2">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 3" Guid="3bc1a6aa-adfc-4f42-aa3c-b318fb49f945" Name="Column 3">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 4" Guid="2b137c43-1565-4872-926e-ad68f508f117" Name="Column 4">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 5" Guid="070eb98e-e9c8-4dd1-927f-8e89e934a676" Name="Column 5">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 6" Guid="c5843474-9e71-4abb-9d63-fe8c77b3da83" Name="Column 6">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 7" Guid="9a1e3baf-349e-4df6-bd1c-387a41ea6393" Name="Column 7">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 8" Guid="d8d80062-ac46-468c-9842-50478cb58305" Name="Column 8">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 9" Guid="edde40f4-79e7-4687-848b-1d11993ed1c1" Name="Column 9">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 10" Guid="e26a2ee6-22bb-4264-b4c9-2be68d91dfa9" Name="Column 10">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 11" Guid="94d3e3ea-d0f5-40fd-b871-406f6c1580c2" Name="Column 11">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 12" Guid="5fbbde9b-35d4-4d69-956f-4cd53902283a" Name="Column 12">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 13" Guid="1694b269-e6ff-41e3-bc8b-9c0177ba123e" Name="Column 13">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 14" Guid="95113228-7c51-4c9a-8945-83d73018d08b" Name="Column 14">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 15" Guid="7b74afe0-3c15-4e2d-866a-0733d5ef96ba" Name="Column 15">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 16" Guid="6261bb74-468f-4859-a2c0-6dfaf8415504" Name="Column 16">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 17" Guid="4ea27215-65e0-48f3-9c7b-719a0ac51d78" Name="Column 17">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 18" Guid="43a15dd0-25dd-4ba3-8c2d-05b97b3c1a92" Name="Column 18">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 19" Guid="21c473a2-77f6-4760-8f07-6dff1299fae3" Name="Column 19">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 20" Guid="a1d743d9-3194-4562-81d6-653279d65425" Name="Column 20">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 21" Guid="0d954aa7-73e1-4acf-96d1-deb8c8bd32fd" Name="Column 21">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 22" Guid="d4b36ce4-5400-402a-a69b-c359b2bd7f1c" Name="Column 22">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 23" Guid="5dd42ec0-258a-4992-89e0-0c467e6e3436" Name="Column 23">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 24" Guid="fb6cbfd8-865f-47e2-9b56-4d7ed26eeae4" Name="Column 24">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 25" Guid="a459abb4-ceb5-4331-8f23-d9a38334397a" Name="Column 25">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                        <ugsmc:RangeColumn DisplayName="Column 26" Guid="c57ee454-6e4a-4499-b6ac-bf145ccac0c8" Name="Column 26">
+                                          <ugsmc:RangeColumn.Sample>
+                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                          </ugsmc:RangeColumn.Sample>
+                                        </ugsmc:RangeColumn>
+                                      </x:Array>
+                                    </uga:WriteRowConnections.AllFields>
+                                    <uga:WriteRowConnections.FileIdBackup>
+                                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="UrlOrId">
+                                        <usau:BackupSlot.BackupValues>
+                                          <scg:List x:TypeArguments="x:Object" x:Key="UrlOrId" Capacity="1">
+                                            <InArgument x:TypeArguments="x:String">[CurrReportFilePath.ID]</InArgument>
+                                          </scg:List>
+                                          <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+                                            <x:Null />
+                                          </scg:List>
+                                        </usau:BackupSlot.BackupValues>
+                                      </usau:BackupSlot>
+                                    </uga:WriteRowConnections.FileIdBackup>
+                                    <uga:WriteRowConnections.InputDataTypeBackup>
+                                      <usau:BackupSlot x:TypeArguments="ugase:InputDataType" StoredValue="IndividualFields">
+                                        <usau:BackupSlot.BackupValues>
+                                          <scg:List x:TypeArguments="x:Object" x:Key="DataRow" Capacity="1">
+                                            <x:Null />
+                                          </scg:List>
+                                          <scg:List x:TypeArguments="x:Object" x:Key="ArrayRow" Capacity="1">
+                                            <x:Null />
+                                          </scg:List>
+                                        </usau:BackupSlot.BackupValues>
+                                      </usau:BackupSlot>
+                                    </uga:WriteRowConnections.InputDataTypeBackup>
+                                    <uga:WriteRowConnections.RangeWriteModeBackup>
+                                      <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+                                        <usau:BackupSlot.BackupValues>
+                                          <scg:List x:TypeArguments="x:Object" x:Key="Append" Capacity="1">
+                                            <x:String></x:String>
+                                          </scg:List>
+                                          <scg:List x:TypeArguments="x:Object" x:Key="Insert" Capacity="1">
+                                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                          </scg:List>
+                                          <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                                            <x:Null />
+                                          </scg:List>
+                                        </usau:BackupSlot.BackupValues>
+                                      </usau:BackupSlot>
+                                    </uga:WriteRowConnections.RangeWriteModeBackup>
+                                    <uga:WriteRowConnections.State>
+                                      <uga:ActivityState>
+                                        <uga:ActivityState.SelectedFields>
+                                          <scg:List x:TypeArguments="uga:DynamicField" Capacity="5">
+                                            <uga:DynamicField Id="7178feb3-fdad-403b-bc0e-f825eee40b85" Name="dynamicField_AddRangeProperty_20">
+                                              <uga:DynamicField.ArgumentValue>
+                                                <InArgument x:TypeArguments="x:Object">[TransactionID]</InArgument>
+                                              </uga:DynamicField.ArgumentValue>
+                                            </uga:DynamicField>
+                                            <uga:DynamicField Id="0aaacec9-c168-4d7a-a45e-a287a6360514" Name="dynamicField_AddRangeProperty_21">
+                                              <uga:DynamicField.ArgumentValue>
+                                                <InArgument x:TypeArguments="x:Object">[TransactionItem.SpecificContent("CarrierCode").ToString]</InArgument>
+                                              </uga:DynamicField.ArgumentValue>
+                                            </uga:DynamicField>
+                                            <uga:DynamicField Id="3bc1a6aa-adfc-4f42-aa3c-b318fb49f945" Name="dynamicField_AddRangeProperty_22">
+                                              <uga:DynamicField.ArgumentValue>
+                                                <InArgument x:TypeArguments="x:Object">[TransactionItem.SpecificContent("CarrierName").ToString]</InArgument>
+                                              </uga:DynamicField.ArgumentValue>
+                                            </uga:DynamicField>
+                                            <uga:DynamicField Id="2b137c43-1565-4872-926e-ad68f508f117" Name="dynamicField_AddRangeProperty_23">
+                                              <uga:DynamicField.ArgumentValue>
+                                                <InArgument x:TypeArguments="x:Object">[CurrentTransactionStatus]</InArgument>
+                                              </uga:DynamicField.ArgumentValue>
+                                            </uga:DynamicField>
+                                            <uga:DynamicField Id="070eb98e-e9c8-4dd1-927f-8e89e934a676" Name="dynamicField_AddRangeProperty_24">
+                                              <uga:DynamicField.ArgumentValue>
+                                                <InArgument x:TypeArguments="x:Object">[Remarks]</InArgument>
+                                              </uga:DynamicField.ArgumentValue>
+                                            </uga:DynamicField>
+                                          </scg:List>
+                                        </uga:ActivityState.SelectedFields>
+                                      </uga:ActivityState>
+                                    </uga:WriteRowConnections.State>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uga:WriteRowConnections>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_15">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="496,374" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[exception.Message]" />
+                                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_37">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">[ExceptionFound]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                              </TryCatch>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:RetryScope.ActivityBody>
+                        <ui:RetryScope.Condition>
+                          <ActivityFunc x:TypeArguments="x:Boolean">
+                            <ui:CheckFalse DisplayName="Check False" ErrorMessage="Unable to update report" Expression="[ExceptionFound]" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="CheckFalse_3" />
+                          </ActivityFunc>
+                        </ui:RetryScope.Condition>
+                      </ui:RetryScope>
+                      <ui:MultipleAssign DisplayName="Update variable values" sap:VirtualizedContainerService.HintSize="542,147" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -876,7 +950,7 @@
                   <Transition.To>
                     <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Get values from Orchestrator Assets and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="254,119" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="655,4234" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="780,4481" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -884,14 +958,14 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="617,4006" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="742,4253" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="555,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="680,82" sap2010:WorkflowViewState.IdRef="Assign_5">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                                 </Assign.To>
@@ -899,7 +973,7 @@
                                   <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="555,2936" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="680,3183" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -908,14 +982,14 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="521,2723" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="646,2970" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:MultipleAssign DisplayName="Initialize variables" sap:VirtualizedContainerService.HintSize="479,209" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                    <ui:MultipleAssign DisplayName="Initialize variables" sap:VirtualizedContainerService.HintSize="604,209" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                                       <ui:MultipleAssign.AssignOperations>
                                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -953,15 +1027,15 @@
                                         </scg:List>
                                       </ui:MultipleAssign.AssignOperations>
                                     </ui:MultipleAssign>
-                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="479,141" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="479,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="604,141" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="604,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
                                         <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants"}]</InArgument>
                                         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="479,169" sap2010:WorkflowViewState.IdRef="If_10">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="604,169" sap2010:WorkflowViewState.IdRef="If_10">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -989,7 +1063,7 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="479,169" sap2010:WorkflowViewState.IdRef="If_12">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="604,169" sap2010:WorkflowViewState.IdRef="If_12">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1017,7 +1091,7 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="479,214" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="604,214" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                       </ui:InvokeWorkflowFile.Arguments>
@@ -1029,7 +1103,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="479,162" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
+                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="604,162" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
                                       <ui:AddLogFields.Fields>
                                         <InArgument x:TypeArguments="x:String" x:Key="logF_BusinessProcessName">[Config("logF_BusinessProcessName").ToString]</InArgument>
                                       </ui:AddLogFields.Fields>
@@ -1041,14 +1115,14 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:AddLogFields>
-                                    <Sequence DisplayName="Create execution report file" sap:VirtualizedContainerService.HintSize="479,1178" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                    <Sequence DisplayName="Create execution report file" sap:VirtualizedContainerService.HintSize="604,1425" sap2010:WorkflowViewState.IdRef="Sequence_54">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uga:CreateSpreadsheetConnections BrowserParentFolderFriendlyName="{x:Null}" BrowserParentFolderId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ParentFolderExisting="{x:Null}" AuthScopesInvalid="False" ConflictResolution="[UiPath.GSuite.Activities.Drive.Enums.ConflictBehavior.AddSeparate]" ConnectionId="66ad403e-5a17-4e6f-87b2-6c139e9ea210" DisplayName="Create Report Spreadsheet" FirstSheetName="ExecutionReport" sap:VirtualizedContainerService.HintSize="388,203" sap2010:WorkflowViewState.IdRef="CreateSpreadsheetConnections_1" ManualEntryParentFolderId="[Config(&quot;GDriveReportFolder&quot;).ToString]" NewSpreadsheet="[CurrReportFilepath]" ParentFolderInputMode="UrlOrId" SpreadsheetName="[&quot;StagnantCarriers Process - Execution Report for &quot; + DateTime.Now.ToString(&quot;M/d/yyyy&quot;)]" UseConnectionService="True">
+                                      <uga:CreateSpreadsheetConnections BrowserParentFolderFriendlyName="{x:Null}" BrowserParentFolderId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ParentFolderExisting="{x:Null}" AuthScopesInvalid="False" ConflictResolution="[UiPath.GSuite.Activities.Drive.Enums.ConflictBehavior.AddSeparate]" ConnectionId="ca888bd3-8899-4a9b-9947-76598a8b1d65" DisplayName="Create Report Spreadsheet" FirstSheetName="ExecutionReport" sap:VirtualizedContainerService.HintSize="542,203" sap2010:WorkflowViewState.IdRef="CreateSpreadsheetConnections_1" ManualEntryParentFolderId="[Config(&quot;GDriveReportFolder&quot;).ToString]" NewSpreadsheet="[CurrReportFilepath]" ParentFolderInputMode="UrlOrId" SpreadsheetName="[&quot;StagnantCarriers Process - Execution Report for &quot; + DateTime.Now.ToString(&quot;M/d/yyyy&quot;)]" UseConnectionService="True">
                                         <uga:CreateSpreadsheetConnections.FolderIdBackup>
                                           <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="UrlOrId">
                                             <usau:BackupSlot.BackupValues>
@@ -1063,215 +1137,294 @@
                                           </usau:BackupSlot>
                                         </uga:CreateSpreadsheetConnections.FolderIdBackup>
                                       </uga:CreateSpreadsheetConnections>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Created report file succesfully&quot;]" />
-                                      <uga:WriteRowConnections ArrayRow="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DataRow="{x:Null}" RowPosition="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="37abbd01-4f4c-45fb-8efd-72e7568e6a7d" DataType="IndividualFields" DisplayName="Write Row" HasHeaders="True" sap:VirtualizedContainerService.HintSize="388,643" sap2010:WorkflowViewState.IdRef="WriteRowConnections_6" ItemSelectionMode="UrlOrId" ManualEntrySpreadsheetId="[CurrReportFilePath.ID]" Range="ExecutionReport" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
-                                        <uga:WriteRowConnections.AllFields>
-                                          <x:Array Type="ugsc:IRangeField">
-                                            <ugsmc:RangeColumn DisplayName="Column 1" Guid="91ed8dd0-9086-4a18-a8c3-87bb0580a543" Name="Column 1">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 2" Guid="036d255c-38cd-470d-a9e8-a57984cbd6cf" Name="Column 2">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 3" Guid="e718e7e2-eca3-4341-9c7b-dae2564c2c59" Name="Column 3">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 4" Guid="c1b9b5df-47cb-47c1-a891-b765da632d9d" Name="Column 4">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 5" Guid="623556de-c429-40d5-bcca-fff3bef84181" Name="Column 5">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 6" Guid="485d327a-f084-46d5-ac68-6c277725cdba" Name="Column 6">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 7" Guid="e8f13cbe-e65d-4b17-9dab-c68f33a4a138" Name="Column 7">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 8" Guid="dc625b77-1d36-4df3-8849-40b3976ac7ce" Name="Column 8">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 9" Guid="288587cb-aafb-418d-a710-780f07e9a6c4" Name="Column 9">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 10" Guid="8b72a4a6-6131-4b58-a3ff-1c53a8e6386f" Name="Column 10">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 11" Guid="da273400-5144-4239-823c-abf6bffdf523" Name="Column 11">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 12" Guid="90cf06b6-a1b5-4272-b45d-42aa87211f56" Name="Column 12">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 13" Guid="537e8d9f-d33a-45b7-808c-5e6fd4fffd22" Name="Column 13">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 14" Guid="75fefc25-6c5f-4878-bc7e-a6c933315f5c" Name="Column 14">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 15" Guid="bae18265-35fb-4fbb-905d-b0a29ccb485b" Name="Column 15">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 16" Guid="f5c9e720-e3b8-4cdc-8af3-da0a5ddee57c" Name="Column 16">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 17" Guid="bad369ca-3174-451b-83cb-7ab5598139d2" Name="Column 17">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 18" Guid="9ea35439-7def-494e-b48f-5e4606214493" Name="Column 18">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 19" Guid="073fbf8f-5191-4b19-9475-e5932808b588" Name="Column 19">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 20" Guid="8d6595cf-e8aa-4b7d-9ca8-b90b69cd93d1" Name="Column 20">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 21" Guid="d415f9d7-24f5-4e5e-b2d5-42226ef72e91" Name="Column 21">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 22" Guid="9c33eb30-43a6-4bd7-8053-ce186e2a777c" Name="Column 22">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 23" Guid="f3d20452-d3a8-49df-b148-ee1340a7e41a" Name="Column 23">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 24" Guid="9784b40f-1c51-415c-9e23-4ec09183a8eb" Name="Column 24">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 25" Guid="60c64b38-659b-47d9-ac5b-ffe057d4057e" Name="Column 25">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                            <ugsmc:RangeColumn DisplayName="Column 26" Guid="2a6199c1-3a15-4b60-ad43-cf88e4d83f2a" Name="Column 26">
-                                              <ugsmc:RangeColumn.Sample>
-                                                <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                              </ugsmc:RangeColumn.Sample>
-                                            </ugsmc:RangeColumn>
-                                          </x:Array>
-                                        </uga:WriteRowConnections.AllFields>
-                                        <uga:WriteRowConnections.FileIdBackup>
-                                          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="UrlOrId">
-                                            <usau:BackupSlot.BackupValues>
-                                              <scg:List x:TypeArguments="x:Object" x:Key="UrlOrId" Capacity="1">
-                                                <InArgument x:TypeArguments="x:String">[CurrReportFilePath.ID]</InArgument>
-                                              </scg:List>
-                                              <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
-                                                <x:Null />
-                                              </scg:List>
-                                            </usau:BackupSlot.BackupValues>
-                                          </usau:BackupSlot>
-                                        </uga:WriteRowConnections.FileIdBackup>
-                                        <uga:WriteRowConnections.InputDataTypeBackup>
-                                          <usau:BackupSlot x:TypeArguments="ugase:InputDataType" StoredValue="IndividualFields">
-                                            <usau:BackupSlot.BackupValues>
-                                              <scg:List x:TypeArguments="x:Object" x:Key="DataRow" Capacity="1">
-                                                <x:Null />
-                                              </scg:List>
-                                              <scg:List x:TypeArguments="x:Object" x:Key="ArrayRow" Capacity="1">
-                                                <x:Null />
-                                              </scg:List>
-                                            </usau:BackupSlot.BackupValues>
-                                          </usau:BackupSlot>
-                                        </uga:WriteRowConnections.InputDataTypeBackup>
-                                        <uga:WriteRowConnections.RangeWriteModeBackup>
-                                          <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
-                                            <usau:BackupSlot.BackupValues>
-                                              <scg:List x:TypeArguments="x:Object" x:Key="Append" Capacity="1">
-                                                <x:String></x:String>
-                                              </scg:List>
-                                              <scg:List x:TypeArguments="x:Object" x:Key="Insert" Capacity="1">
-                                                <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                                              </scg:List>
-                                              <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
-                                                <x:Null />
-                                              </scg:List>
-                                            </usau:BackupSlot.BackupValues>
-                                          </usau:BackupSlot>
-                                        </uga:WriteRowConnections.RangeWriteModeBackup>
-                                        <uga:WriteRowConnections.State>
-                                          <uga:ActivityState>
-                                            <uga:ActivityState.SelectedFields>
-                                              <scg:List x:TypeArguments="uga:DynamicField" Capacity="5">
-                                                <uga:DynamicField Id="91ed8dd0-9086-4a18-a8c3-87bb0580a543" Name="dynamicField_AddRangeProperty_20">
-                                                  <uga:DynamicField.ArgumentValue>
-                                                    <InArgument x:TypeArguments="x:Object">[ArrayHeaders(0)]</InArgument>
-                                                  </uga:DynamicField.ArgumentValue>
-                                                </uga:DynamicField>
-                                                <uga:DynamicField Id="036d255c-38cd-470d-a9e8-a57984cbd6cf" Name="dynamicField_AddRangeProperty_21">
-                                                  <uga:DynamicField.ArgumentValue>
-                                                    <InArgument x:TypeArguments="x:Object">[ArrayHeaders(1)]</InArgument>
-                                                  </uga:DynamicField.ArgumentValue>
-                                                </uga:DynamicField>
-                                                <uga:DynamicField Id="e718e7e2-eca3-4341-9c7b-dae2564c2c59" Name="dynamicField_AddRangeProperty_22">
-                                                  <uga:DynamicField.ArgumentValue>
-                                                    <InArgument x:TypeArguments="x:Object">[ArrayHeaders(2)]</InArgument>
-                                                  </uga:DynamicField.ArgumentValue>
-                                                </uga:DynamicField>
-                                                <uga:DynamicField Id="c1b9b5df-47cb-47c1-a891-b765da632d9d" Name="dynamicField_AddRangeProperty_23">
-                                                  <uga:DynamicField.ArgumentValue>
-                                                    <InArgument x:TypeArguments="x:Object">[ArrayHeaders(3)]</InArgument>
-                                                  </uga:DynamicField.ArgumentValue>
-                                                </uga:DynamicField>
-                                                <uga:DynamicField Id="623556de-c429-40d5-bcca-fff3bef84181" Name="dynamicField_AddRangeProperty_24">
-                                                  <uga:DynamicField.ArgumentValue>
-                                                    <InArgument x:TypeArguments="x:Object">[ArrayHeaders(4)]</InArgument>
-                                                  </uga:DynamicField.ArgumentValue>
-                                                </uga:DynamicField>
-                                              </scg:List>
-                                            </uga:ActivityState.SelectedFields>
-                                          </uga:ActivityState>
-                                        </uga:WriteRowConnections.State>
-                                      </uga:WriteRowConnections>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="542,141" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Created report file succesfully&quot;]" />
+                                      <ui:RetryScope DisplayName="Update Report file" sap:VirtualizedContainerService.HintSize="542,890" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="5" RetryInterval="00:00:03">
+                                        <ui:RetryScope.ActivityBody>
+                                          <ActivityAction>
+                                            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="500,521" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign DisplayName="Reset value" sap:VirtualizedContainerService.HintSize="438,82" sap2010:WorkflowViewState.IdRef="Assign_39">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Boolean">[ExceptionFound]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,288" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <TryCatch.Try>
+                                                  <uga:WriteRowConnections ArrayRow="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DataRow="{x:Null}" RowPosition="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="6fd82878-44d7-43f4-bbf0-a01d6fb2942c" DataType="IndividualFields" DisplayName="Write Row" HasHeaders="True" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="WriteRowConnections_6" ItemSelectionMode="UrlOrId" ManualEntrySpreadsheetId="[CurrReportFilePath.ID]" Range="ExecutionReport" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+                                                    <uga:WriteRowConnections.AllFields>
+                                                      <x:Array Type="ugsc:IRangeField">
+                                                        <ugsmc:RangeColumn DisplayName="Column 1" Guid="91ed8dd0-9086-4a18-a8c3-87bb0580a543" Name="Column 1">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 2" Guid="036d255c-38cd-470d-a9e8-a57984cbd6cf" Name="Column 2">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 3" Guid="e718e7e2-eca3-4341-9c7b-dae2564c2c59" Name="Column 3">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 4" Guid="c1b9b5df-47cb-47c1-a891-b765da632d9d" Name="Column 4">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 5" Guid="623556de-c429-40d5-bcca-fff3bef84181" Name="Column 5">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 6" Guid="485d327a-f084-46d5-ac68-6c277725cdba" Name="Column 6">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 7" Guid="e8f13cbe-e65d-4b17-9dab-c68f33a4a138" Name="Column 7">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 8" Guid="dc625b77-1d36-4df3-8849-40b3976ac7ce" Name="Column 8">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 9" Guid="288587cb-aafb-418d-a710-780f07e9a6c4" Name="Column 9">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 10" Guid="8b72a4a6-6131-4b58-a3ff-1c53a8e6386f" Name="Column 10">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 11" Guid="da273400-5144-4239-823c-abf6bffdf523" Name="Column 11">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 12" Guid="90cf06b6-a1b5-4272-b45d-42aa87211f56" Name="Column 12">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 13" Guid="537e8d9f-d33a-45b7-808c-5e6fd4fffd22" Name="Column 13">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 14" Guid="75fefc25-6c5f-4878-bc7e-a6c933315f5c" Name="Column 14">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 15" Guid="bae18265-35fb-4fbb-905d-b0a29ccb485b" Name="Column 15">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 16" Guid="f5c9e720-e3b8-4cdc-8af3-da0a5ddee57c" Name="Column 16">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 17" Guid="bad369ca-3174-451b-83cb-7ab5598139d2" Name="Column 17">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 18" Guid="9ea35439-7def-494e-b48f-5e4606214493" Name="Column 18">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 19" Guid="073fbf8f-5191-4b19-9475-e5932808b588" Name="Column 19">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 20" Guid="8d6595cf-e8aa-4b7d-9ca8-b90b69cd93d1" Name="Column 20">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 21" Guid="d415f9d7-24f5-4e5e-b2d5-42226ef72e91" Name="Column 21">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 22" Guid="9c33eb30-43a6-4bd7-8053-ce186e2a777c" Name="Column 22">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 23" Guid="f3d20452-d3a8-49df-b148-ee1340a7e41a" Name="Column 23">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 24" Guid="9784b40f-1c51-415c-9e23-4ec09183a8eb" Name="Column 24">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 25" Guid="60c64b38-659b-47d9-ac5b-ffe057d4057e" Name="Column 25">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                        <ugsmc:RangeColumn DisplayName="Column 26" Guid="2a6199c1-3a15-4b60-ad43-cf88e4d83f2a" Name="Column 26">
+                                                          <ugsmc:RangeColumn.Sample>
+                                                            <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                          </ugsmc:RangeColumn.Sample>
+                                                        </ugsmc:RangeColumn>
+                                                      </x:Array>
+                                                    </uga:WriteRowConnections.AllFields>
+                                                    <uga:WriteRowConnections.FileIdBackup>
+                                                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="UrlOrId">
+                                                        <usau:BackupSlot.BackupValues>
+                                                          <scg:List x:TypeArguments="x:Object" x:Key="UrlOrId" Capacity="1">
+                                                            <InArgument x:TypeArguments="x:String">[CurrReportFilePath.ID]</InArgument>
+                                                          </scg:List>
+                                                          <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+                                                            <x:Null />
+                                                          </scg:List>
+                                                        </usau:BackupSlot.BackupValues>
+                                                      </usau:BackupSlot>
+                                                    </uga:WriteRowConnections.FileIdBackup>
+                                                    <uga:WriteRowConnections.InputDataTypeBackup>
+                                                      <usau:BackupSlot x:TypeArguments="ugase:InputDataType" StoredValue="IndividualFields">
+                                                        <usau:BackupSlot.BackupValues>
+                                                          <scg:List x:TypeArguments="x:Object" x:Key="DataRow" Capacity="1">
+                                                            <x:Null />
+                                                          </scg:List>
+                                                          <scg:List x:TypeArguments="x:Object" x:Key="ArrayRow" Capacity="1">
+                                                            <x:Null />
+                                                          </scg:List>
+                                                        </usau:BackupSlot.BackupValues>
+                                                      </usau:BackupSlot>
+                                                    </uga:WriteRowConnections.InputDataTypeBackup>
+                                                    <uga:WriteRowConnections.RangeWriteModeBackup>
+                                                      <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+                                                        <usau:BackupSlot.BackupValues>
+                                                          <scg:List x:TypeArguments="x:Object" x:Key="Append" Capacity="1">
+                                                            <x:String></x:String>
+                                                          </scg:List>
+                                                          <scg:List x:TypeArguments="x:Object" x:Key="Insert" Capacity="1">
+                                                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                                          </scg:List>
+                                                          <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                                                            <x:Null />
+                                                          </scg:List>
+                                                        </usau:BackupSlot.BackupValues>
+                                                      </usau:BackupSlot>
+                                                    </uga:WriteRowConnections.RangeWriteModeBackup>
+                                                    <uga:WriteRowConnections.State>
+                                                      <uga:ActivityState>
+                                                        <uga:ActivityState.SelectedFields>
+                                                          <scg:List x:TypeArguments="uga:DynamicField" Capacity="5">
+                                                            <uga:DynamicField Id="91ed8dd0-9086-4a18-a8c3-87bb0580a543" Name="dynamicField_AddRangeProperty_20">
+                                                              <uga:DynamicField.ArgumentValue>
+                                                                <InArgument x:TypeArguments="x:Object">[ArrayHeaders(0)]</InArgument>
+                                                              </uga:DynamicField.ArgumentValue>
+                                                            </uga:DynamicField>
+                                                            <uga:DynamicField Id="036d255c-38cd-470d-a9e8-a57984cbd6cf" Name="dynamicField_AddRangeProperty_21">
+                                                              <uga:DynamicField.ArgumentValue>
+                                                                <InArgument x:TypeArguments="x:Object">[ArrayHeaders(1)]</InArgument>
+                                                              </uga:DynamicField.ArgumentValue>
+                                                            </uga:DynamicField>
+                                                            <uga:DynamicField Id="e718e7e2-eca3-4341-9c7b-dae2564c2c59" Name="dynamicField_AddRangeProperty_22">
+                                                              <uga:DynamicField.ArgumentValue>
+                                                                <InArgument x:TypeArguments="x:Object">[ArrayHeaders(2)]</InArgument>
+                                                              </uga:DynamicField.ArgumentValue>
+                                                            </uga:DynamicField>
+                                                            <uga:DynamicField Id="c1b9b5df-47cb-47c1-a891-b765da632d9d" Name="dynamicField_AddRangeProperty_23">
+                                                              <uga:DynamicField.ArgumentValue>
+                                                                <InArgument x:TypeArguments="x:Object">[ArrayHeaders(3)]</InArgument>
+                                                              </uga:DynamicField.ArgumentValue>
+                                                            </uga:DynamicField>
+                                                            <uga:DynamicField Id="623556de-c429-40d5-bcca-fff3bef84181" Name="dynamicField_AddRangeProperty_24">
+                                                              <uga:DynamicField.ArgumentValue>
+                                                                <InArgument x:TypeArguments="x:Object">[ArrayHeaders(4)]</InArgument>
+                                                              </uga:DynamicField.ArgumentValue>
+                                                            </uga:DynamicField>
+                                                          </scg:List>
+                                                        </uga:ActivityState.SelectedFields>
+                                                      </uga:ActivityState>
+                                                    </uga:WriteRowConnections.State>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </uga:WriteRowConnections>
+                                                </TryCatch.Try>
+                                                <TryCatch.Catches>
+                                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_14">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ActivityAction x:TypeArguments="s:Exception">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="496,374" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[exception.Message]" />
+                                                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Boolean">[ExceptionFound]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </Catch>
+                                                </TryCatch.Catches>
+                                              </TryCatch>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:RetryScope.ActivityBody>
+                                        <ui:RetryScope.Condition>
+                                          <ActivityFunc x:TypeArguments="x:Boolean">
+                                            <ui:CheckFalse DisplayName="Check False" ErrorMessage="Unable to update report" Expression="[ExceptionFound]" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="CheckFalse_2" />
+                                          </ActivityFunc>
+                                        </ui:RetryScope.Condition>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:RetryScope>
                                     </Sequence>
                                   </Sequence>
                                 </If.Then>
@@ -1285,7 +1438,7 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="555,244" sap2010:WorkflowViewState.IdRef="If_13">
+                              <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="680,244" sap2010:WorkflowViewState.IdRef="If_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1300,7 +1453,7 @@
                                   <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_32" />
                                 </If.Else>
                               </If>
-                              <ui:RetryScope DisplayName="Retry Initialize Applications" sap:VirtualizedContainerService.HintSize="555,513" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
+                              <ui:RetryScope DisplayName="Retry Initialize Applications" sap:VirtualizedContainerService.HintSize="680,513" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
                                 <ui:RetryScope.ActivityBody>
                                   <ActivityAction>
                                     <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_39">
@@ -1394,9 +1547,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="763,3616" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="826,3783" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="717,3471" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="780,3638" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1404,13 +1557,13 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="679,3243" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="742,3410" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="617,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="680,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -1421,22 +1574,22 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeWorkflowFile>
-                                      <If Condition="[SystemException Is Nothing AndAlso TotalCompletedCases &gt; 0]" sap:VirtualizedContainerService.HintSize="617,2979" sap2010:WorkflowViewState.IdRef="If_16">
+                                      <If Condition="[SystemException Is Nothing AndAlso TotalCompletedCases &gt; 0]" sap:VirtualizedContainerService.HintSize="680,3146" sap2010:WorkflowViewState.IdRef="If_16">
                                         <If.Then>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="583,1718" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="646,1885" sap2010:WorkflowViewState.IdRef="Sequence_55">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Sequence DisplayName="Updating master report" sap:VirtualizedContainerService.HintSize="541,972" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                            <Sequence DisplayName="Updating master report" sap:VirtualizedContainerService.HintSize="604,1139" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,178" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                                              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="542,178" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
                                                 <ui:MultipleAssign.AssignOperations>
                                                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
@@ -1466,215 +1619,282 @@
                                                   </scg:List>
                                                 </ui:MultipleAssign.AssignOperations>
                                               </ui:MultipleAssign>
-                                              <uga:WriteRowConnections ArrayRow="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DataRow="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="37abbd01-4f4c-45fb-8efd-72e7568e6a7d" DataType="IndividualFields" DisplayName="Update Master report" HasHeaders="True" sap:VirtualizedContainerService.HintSize="479,643" sap2010:WorkflowViewState.IdRef="WriteRowConnections_4" ItemSelectionMode="UrlOrId" ManualEntrySpreadsheetId="[Config(&quot;GDriveMasterReportID&quot;).ToString]" Range="Sheet1" RowPosition="0" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
-                                                <uga:WriteRowConnections.AllFields>
-                                                  <x:Array Type="ugsc:IRangeField">
-                                                    <ugsmc:RangeColumn DisplayName="Column 1" Guid="3ce86b4a-3c64-432c-a4b3-a80821fb3a1b" Name="Column 1">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 2" Guid="9744c206-712f-41fd-b48e-f8b79e3f92d4" Name="Column 2">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 3" Guid="4571f1fa-d9ec-4cea-b0f4-386309025e02" Name="Column 3">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 4" Guid="5a72bf5f-d533-427b-91d8-c4b20d54c936" Name="Column 4">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 5" Guid="692e68e9-84ea-4613-a976-55bf77b984d0" Name="Column 5">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 6" Guid="a27eb606-40b5-4e87-a44d-616971f00cf7" Name="Column 6">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 7" Guid="dbdc0370-2ceb-41c0-be85-dd6e0d822d77" Name="Column 7">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 8" Guid="55493438-948e-4e2c-ab00-3759d88a192d" Name="Column 8">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 9" Guid="5fcda7c4-38e1-4ba2-95f7-2a179a5f718d" Name="Column 9">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 10" Guid="eb0ca72c-51af-4e3c-bf62-3f71a4cf938d" Name="Column 10">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 11" Guid="ee3f3d8f-afb5-49e6-b7ce-33516b81e0be" Name="Column 11">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 12" Guid="e4346200-1199-4da1-ba41-aed6568e04fb" Name="Column 12">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 13" Guid="cf95553c-cd59-4376-a778-7e92bf47d5cd" Name="Column 13">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 14" Guid="d5c9a426-df59-40a3-a2d2-84c948ba101b" Name="Column 14">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 15" Guid="2a7302ef-c388-4020-856c-b5c3166649fc" Name="Column 15">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 16" Guid="7acbc664-bba3-40c4-a423-7762750887af" Name="Column 16">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 17" Guid="872f39ef-f6ff-4664-a845-83a1686647d5" Name="Column 17">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 18" Guid="de483807-f855-4326-ace9-06ab5ac9e610" Name="Column 18">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 19" Guid="c04a45c6-ba01-4623-a15d-5861ebeeafb6" Name="Column 19">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 20" Guid="fdc3220a-e0e9-49e9-b5a5-94260585188a" Name="Column 20">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 21" Guid="73732567-df15-4348-9c7b-cd29e76d1284" Name="Column 21">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 22" Guid="caa2b907-e8ca-42c7-9ec4-ab85cc75130d" Name="Column 22">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 23" Guid="705697e5-b1aa-4e68-b221-991371ceb846" Name="Column 23">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 24" Guid="72d9b148-33f0-45b5-988c-b8ad0c4965a7" Name="Column 24">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 25" Guid="4beed084-bf47-485e-b47a-ac04ecafade6" Name="Column 25">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                    <ugsmc:RangeColumn DisplayName="Column 26" Guid="b6a31720-230c-4656-8971-98e46823f087" Name="Column 26">
-                                                      <ugsmc:RangeColumn.Sample>
-                                                        <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
-                                                      </ugsmc:RangeColumn.Sample>
-                                                    </ugsmc:RangeColumn>
-                                                  </x:Array>
-                                                </uga:WriteRowConnections.AllFields>
-                                                <uga:WriteRowConnections.FileIdBackup>
-                                                  <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="UrlOrId">
-                                                    <usau:BackupSlot.BackupValues>
-                                                      <scg:List x:TypeArguments="x:Object" x:Key="UrlOrId" Capacity="1">
-                                                        <InArgument x:TypeArguments="x:String">[Config("GDriveMasterReportID").ToString]</InArgument>
-                                                      </scg:List>
-                                                      <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
-                                                        <InArgument x:TypeArguments="ugdm:GDriveRemoteItem">[Config("GDriveMasterReport")]</InArgument>
-                                                      </scg:List>
-                                                      <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="2">
-                                                        <InArgument x:TypeArguments="x:String">1QEXiPcGNM3iK8h17-4_hfZhC_Zw03D_XFXIOTS7O1uM</InArgument>
-                                                        <InArgument x:TypeArguments="x:String">14_Legal_StagnantCarriers_MasterReport</InArgument>
-                                                      </scg:List>
-                                                    </usau:BackupSlot.BackupValues>
-                                                  </usau:BackupSlot>
-                                                </uga:WriteRowConnections.FileIdBackup>
-                                                <uga:WriteRowConnections.InputDataTypeBackup>
-                                                  <usau:BackupSlot x:TypeArguments="ugase:InputDataType" StoredValue="IndividualFields">
-                                                    <usau:BackupSlot.BackupValues>
-                                                      <scg:List x:TypeArguments="x:Object" x:Key="DataRow" Capacity="1">
-                                                        <x:Null />
-                                                      </scg:List>
-                                                    </usau:BackupSlot.BackupValues>
-                                                  </usau:BackupSlot>
-                                                </uga:WriteRowConnections.InputDataTypeBackup>
-                                                <uga:WriteRowConnections.RangeWriteModeBackup>
-                                                  <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
-                                                    <usau:BackupSlot.BackupValues>
-                                                      <scg:Dictionary x:TypeArguments="ugase:RangeWriteMode, scg:List(x:Object)" />
-                                                    </usau:BackupSlot.BackupValues>
-                                                  </usau:BackupSlot>
-                                                </uga:WriteRowConnections.RangeWriteModeBackup>
-                                                <uga:WriteRowConnections.State>
-                                                  <uga:ActivityState>
-                                                    <uga:ActivityState.SelectedFields>
-                                                      <scg:List x:TypeArguments="uga:DynamicField" Capacity="5">
-                                                        <uga:DynamicField Id="3ce86b4a-3c64-432c-a4b3-a80821fb3a1b" Name="dynamicField_AddRangeProperty_20">
-                                                          <uga:DynamicField.ArgumentValue>
-                                                            <InArgument x:TypeArguments="x:Object">[DateTime.Now.ToString]</InArgument>
-                                                          </uga:DynamicField.ArgumentValue>
-                                                        </uga:DynamicField>
-                                                        <uga:DynamicField Id="9744c206-712f-41fd-b48e-f8b79e3f92d4" Name="dynamicField_AddRangeProperty_21">
-                                                          <uga:DynamicField.ArgumentValue>
-                                                            <InArgument x:TypeArguments="x:Object">[ExecutionTime]</InArgument>
-                                                          </uga:DynamicField.ArgumentValue>
-                                                        </uga:DynamicField>
-                                                        <uga:DynamicField Id="4571f1fa-d9ec-4cea-b0f4-386309025e02" Name="dynamicField_AddRangeProperty_22">
-                                                          <uga:DynamicField.ArgumentValue>
-                                                            <InArgument x:TypeArguments="x:Object">[TotalCompletedCases]</InArgument>
-                                                          </uga:DynamicField.ArgumentValue>
-                                                        </uga:DynamicField>
-                                                        <uga:DynamicField Id="5a72bf5f-d533-427b-91d8-c4b20d54c936" Name="dynamicField_AddRangeProperty_23">
-                                                          <uga:DynamicField.ArgumentValue>
-                                                            <InArgument x:TypeArguments="x:Object">[TotalExceptionCases]</InArgument>
-                                                          </uga:DynamicField.ArgumentValue>
-                                                        </uga:DynamicField>
-                                                        <uga:DynamicField Id="692e68e9-84ea-4613-a976-55bf77b984d0" Name="dynamicField_AddRangeProperty_24">
-                                                          <uga:DynamicField.ArgumentValue>
-                                                            <InArgument x:TypeArguments="x:Object">[CurrReportFilePath.Uri]</InArgument>
-                                                          </uga:DynamicField.ArgumentValue>
-                                                        </uga:DynamicField>
-                                                      </scg:List>
-                                                    </uga:ActivityState.SelectedFields>
-                                                  </uga:ActivityState>
-                                                </uga:WriteRowConnections.State>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uga:WriteRowConnections>
+                                              <ui:RetryScope DisplayName="Update Report file" sap:VirtualizedContainerService.HintSize="542,810" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="5" RetryInterval="00:00:03">
+                                                <ui:RetryScope.ActivityBody>
+                                                  <ActivityAction>
+                                                    <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="500,521" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Assign DisplayName="Reset value" sap:VirtualizedContainerService.HintSize="438,82" sap2010:WorkflowViewState.IdRef="Assign_40">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:Boolean">[ExceptionFound]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,288" sap2010:WorkflowViewState.IdRef="TryCatch_15">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <TryCatch.Try>
+                                                          <uga:WriteRowConnections ArrayRow="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DataRow="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="6fd82878-44d7-43f4-bbf0-a01d6fb2942c" DataType="IndividualFields" DisplayName="Update Master report" HasHeaders="True" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="WriteRowConnections_4" ItemSelectionMode="UrlOrId" ManualEntrySpreadsheetId="[Config(&quot;GDriveMasterReportID&quot;).ToString]" Range="Sheet1" RowPosition="0" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+                                                            <uga:WriteRowConnections.AllFields>
+                                                              <x:Array Type="ugsc:IRangeField">
+                                                                <ugsmc:RangeColumn DisplayName="Column 1" Guid="3ce86b4a-3c64-432c-a4b3-a80821fb3a1b" Name="Column 1">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 2" Guid="9744c206-712f-41fd-b48e-f8b79e3f92d4" Name="Column 2">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 3" Guid="4571f1fa-d9ec-4cea-b0f4-386309025e02" Name="Column 3">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 4" Guid="5a72bf5f-d533-427b-91d8-c4b20d54c936" Name="Column 4">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 5" Guid="692e68e9-84ea-4613-a976-55bf77b984d0" Name="Column 5">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 6" Guid="a27eb606-40b5-4e87-a44d-616971f00cf7" Name="Column 6">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 7" Guid="dbdc0370-2ceb-41c0-be85-dd6e0d822d77" Name="Column 7">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 8" Guid="55493438-948e-4e2c-ab00-3759d88a192d" Name="Column 8">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 9" Guid="5fcda7c4-38e1-4ba2-95f7-2a179a5f718d" Name="Column 9">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 10" Guid="eb0ca72c-51af-4e3c-bf62-3f71a4cf938d" Name="Column 10">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 11" Guid="ee3f3d8f-afb5-49e6-b7ce-33516b81e0be" Name="Column 11">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 12" Guid="e4346200-1199-4da1-ba41-aed6568e04fb" Name="Column 12">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 13" Guid="cf95553c-cd59-4376-a778-7e92bf47d5cd" Name="Column 13">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 14" Guid="d5c9a426-df59-40a3-a2d2-84c948ba101b" Name="Column 14">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 15" Guid="2a7302ef-c388-4020-856c-b5c3166649fc" Name="Column 15">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 16" Guid="7acbc664-bba3-40c4-a423-7762750887af" Name="Column 16">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 17" Guid="872f39ef-f6ff-4664-a845-83a1686647d5" Name="Column 17">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 18" Guid="de483807-f855-4326-ace9-06ab5ac9e610" Name="Column 18">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 19" Guid="c04a45c6-ba01-4623-a15d-5861ebeeafb6" Name="Column 19">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 20" Guid="fdc3220a-e0e9-49e9-b5a5-94260585188a" Name="Column 20">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 21" Guid="73732567-df15-4348-9c7b-cd29e76d1284" Name="Column 21">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 22" Guid="caa2b907-e8ca-42c7-9ec4-ab85cc75130d" Name="Column 22">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 23" Guid="705697e5-b1aa-4e68-b221-991371ceb846" Name="Column 23">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 24" Guid="72d9b148-33f0-45b5-988c-b8ad0c4965a7" Name="Column 24">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 25" Guid="4beed084-bf47-485e-b47a-ac04ecafade6" Name="Column 25">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                                <ugsmc:RangeColumn DisplayName="Column 26" Guid="b6a31720-230c-4656-8971-98e46823f087" Name="Column 26">
+                                                                  <ugsmc:RangeColumn.Sample>
+                                                                    <ugsmc:CellDetail Type="Object" TypeFormat="General" Value="Sample" />
+                                                                  </ugsmc:RangeColumn.Sample>
+                                                                </ugsmc:RangeColumn>
+                                                              </x:Array>
+                                                            </uga:WriteRowConnections.AllFields>
+                                                            <uga:WriteRowConnections.FileIdBackup>
+                                                              <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="UrlOrId">
+                                                                <usau:BackupSlot.BackupValues>
+                                                                  <scg:List x:TypeArguments="x:Object" x:Key="UrlOrId" Capacity="1">
+                                                                    <InArgument x:TypeArguments="x:String">[Config("GDriveMasterReportID").ToString]</InArgument>
+                                                                  </scg:List>
+                                                                  <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+                                                                    <InArgument x:TypeArguments="ugdm:GDriveRemoteItem">[Config("GDriveMasterReport")]</InArgument>
+                                                                  </scg:List>
+                                                                  <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="2">
+                                                                    <InArgument x:TypeArguments="x:String">1QEXiPcGNM3iK8h17-4_hfZhC_Zw03D_XFXIOTS7O1uM</InArgument>
+                                                                    <InArgument x:TypeArguments="x:String">14_Legal_StagnantCarriers_MasterReport</InArgument>
+                                                                  </scg:List>
+                                                                </usau:BackupSlot.BackupValues>
+                                                              </usau:BackupSlot>
+                                                            </uga:WriteRowConnections.FileIdBackup>
+                                                            <uga:WriteRowConnections.InputDataTypeBackup>
+                                                              <usau:BackupSlot x:TypeArguments="ugase:InputDataType" StoredValue="IndividualFields">
+                                                                <usau:BackupSlot.BackupValues>
+                                                                  <scg:List x:TypeArguments="x:Object" x:Key="DataRow" Capacity="1">
+                                                                    <x:Null />
+                                                                  </scg:List>
+                                                                </usau:BackupSlot.BackupValues>
+                                                              </usau:BackupSlot>
+                                                            </uga:WriteRowConnections.InputDataTypeBackup>
+                                                            <uga:WriteRowConnections.RangeWriteModeBackup>
+                                                              <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+                                                                <usau:BackupSlot.BackupValues>
+                                                                  <scg:Dictionary x:TypeArguments="ugase:RangeWriteMode, scg:List(x:Object)" />
+                                                                </usau:BackupSlot.BackupValues>
+                                                              </usau:BackupSlot>
+                                                            </uga:WriteRowConnections.RangeWriteModeBackup>
+                                                            <uga:WriteRowConnections.State>
+                                                              <uga:ActivityState>
+                                                                <uga:ActivityState.SelectedFields>
+                                                                  <scg:List x:TypeArguments="uga:DynamicField" Capacity="5">
+                                                                    <uga:DynamicField Id="3ce86b4a-3c64-432c-a4b3-a80821fb3a1b" Name="dynamicField_AddRangeProperty_20">
+                                                                      <uga:DynamicField.ArgumentValue>
+                                                                        <InArgument x:TypeArguments="x:Object">[DateTime.Now.ToString]</InArgument>
+                                                                      </uga:DynamicField.ArgumentValue>
+                                                                    </uga:DynamicField>
+                                                                    <uga:DynamicField Id="9744c206-712f-41fd-b48e-f8b79e3f92d4" Name="dynamicField_AddRangeProperty_21">
+                                                                      <uga:DynamicField.ArgumentValue>
+                                                                        <InArgument x:TypeArguments="x:Object">[ExecutionTime]</InArgument>
+                                                                      </uga:DynamicField.ArgumentValue>
+                                                                    </uga:DynamicField>
+                                                                    <uga:DynamicField Id="4571f1fa-d9ec-4cea-b0f4-386309025e02" Name="dynamicField_AddRangeProperty_22">
+                                                                      <uga:DynamicField.ArgumentValue>
+                                                                        <InArgument x:TypeArguments="x:Object">[TotalCompletedCases]</InArgument>
+                                                                      </uga:DynamicField.ArgumentValue>
+                                                                    </uga:DynamicField>
+                                                                    <uga:DynamicField Id="5a72bf5f-d533-427b-91d8-c4b20d54c936" Name="dynamicField_AddRangeProperty_23">
+                                                                      <uga:DynamicField.ArgumentValue>
+                                                                        <InArgument x:TypeArguments="x:Object">[TotalExceptionCases]</InArgument>
+                                                                      </uga:DynamicField.ArgumentValue>
+                                                                    </uga:DynamicField>
+                                                                    <uga:DynamicField Id="692e68e9-84ea-4613-a976-55bf77b984d0" Name="dynamicField_AddRangeProperty_24">
+                                                                      <uga:DynamicField.ArgumentValue>
+                                                                        <InArgument x:TypeArguments="x:Object">[CurrReportFilePath.Uri]</InArgument>
+                                                                      </uga:DynamicField.ArgumentValue>
+                                                                    </uga:DynamicField>
+                                                                  </scg:List>
+                                                                </uga:ActivityState.SelectedFields>
+                                                              </uga:ActivityState>
+                                                            </uga:WriteRowConnections.State>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </uga:WriteRowConnections>
+                                                        </TryCatch.Try>
+                                                        <TryCatch.Catches>
+                                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_16">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ActivityAction x:TypeArguments="s:Exception">
+                                                              <ActivityAction.Argument>
+                                                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                              </ActivityAction.Argument>
+                                                              <Sequence sap:VirtualizedContainerService.HintSize="496,374" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[exception.Message]" />
+                                                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_41">
+                                                                  <Assign.To>
+                                                                    <OutArgument x:TypeArguments="x:Boolean">[ExceptionFound]</OutArgument>
+                                                                  </Assign.To>
+                                                                  <Assign.Value>
+                                                                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                                  </Assign.Value>
+                                                                </Assign>
+                                                              </Sequence>
+                                                            </ActivityAction>
+                                                          </Catch>
+                                                        </TryCatch.Catches>
+                                                      </TryCatch>
+                                                    </Sequence>
+                                                  </ActivityAction>
+                                                </ui:RetryScope.ActivityBody>
+                                                <ui:RetryScope.Condition>
+                                                  <ActivityFunc x:TypeArguments="x:Boolean">
+                                                    <ui:CheckFalse DisplayName="Check False" ErrorMessage="Unable to update report" Expression="[ExceptionFound]" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="CheckFalse_4" />
+                                                  </ActivityFunc>
+                                                </ui:RetryScope.Condition>
+                                              </ui:RetryScope>
                                             </Sequence>
-                                            <Sequence DisplayName="Sending notifcation email" sap:VirtualizedContainerService.HintSize="541,618" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                            <Sequence DisplayName="Sending notifcation email" sap:VirtualizedContainerService.HintSize="604,618" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="FromEmail" />
                                                 <Variable x:TypeArguments="x:String" Name="CurrReportUri" />
@@ -1685,7 +1905,7 @@
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <uga:SendEmailConnections ArgumentAttachments="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Hi, &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;This is a notification to inform you that the &lt;/SPAN&gt;&lt;SPAN&gt;Stagnant Carriers &lt;/SPAN&gt;&lt;SPAN&gt;RPA finished with status: Succesful.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;You can find the execution report in &lt;/SPAN&gt;&lt;SPAN&gt;t&lt;/SPAN&gt;&lt;SPAN&gt;he following link:&lt;/SPAN&gt;&lt;BR/&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Ad&lt;/SPAN&gt;&lt;SPAN&gt;d&lt;/SPAN&gt;&lt;SPAN&gt;itionally, you can access the Master report here:&lt;/SPAN&gt;&lt;BR/&gt;&lt;SPAN&gt;{1}&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Best Regards,&lt;/SPAN&gt;&lt;BR/&gt;&lt;SPAN&gt;The RPA Team&lt;/SPAN&gt;&lt;/P&gt;&quot;, CurrReportFilePath.Uri.ToString, MasterReportUri)]" Cc="[Config(&quot;CCEmail&quot;).ToString.Split]" ConnectionId="25067d04-154e-4f04-a0cf-4a96cf79519b" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="388,507" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Stagnant Carriers RPA executed succesfully" To="[Config(&quot;ToEmail&quot;).ToString.Split]" UseConnectionService="True">
+                                              <uga:SendEmailConnections ArgumentAttachments="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Hi, &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;This is a notification to inform you that the &lt;/SPAN&gt;&lt;SPAN&gt;Stagnant Carriers &lt;/SPAN&gt;&lt;SPAN&gt;RPA finished with status: Succesful.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;You can find the execution report in &lt;/SPAN&gt;&lt;SPAN&gt;t&lt;/SPAN&gt;&lt;SPAN&gt;he following link:&lt;/SPAN&gt;&lt;BR/&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Ad&lt;/SPAN&gt;&lt;SPAN&gt;d&lt;/SPAN&gt;&lt;SPAN&gt;itionally, you can access the Master report here:&lt;/SPAN&gt;&lt;BR/&gt;&lt;SPAN&gt;{1}&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Best Regards,&lt;/SPAN&gt;&lt;BR/&gt;&lt;SPAN&gt;The RPA Team&lt;/SPAN&gt;&lt;/P&gt;&quot;, CurrReportFilePath.Uri.ToString, MasterReportUri)]" Cc="[Config(&quot;CCEmail&quot;).ToString.Split]" ConnectionId="d1c7e81e-b9df-493a-a827-aae964b892e1" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="388,507" sap2010:WorkflowViewState.IdRef="SendEmailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Stagnant Carriers RPA executed succesfully" To="[Config(&quot;ToEmail&quot;).ToString.Split]" UseConnectionService="True">
                                                 <uga:SendEmailConnections.AttachmentsBackup>
                                                   <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
                                                     <usau:BackupSlot.BackupValues>
@@ -1932,6 +2152,7 @@
       <Variable x:TypeArguments="x:Int32" Name="ReportRowCount" />
       <Variable x:TypeArguments="x:TimeSpan" Name="startTime" />
       <Variable x:TypeArguments="x:TimeSpan" Name="endTime" />
+      <Variable x:TypeArguments="x:Boolean" Name="ExceptionFound" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>
