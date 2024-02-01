@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,904</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,864</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -1547,9 +1547,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="826,3783" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="826,4366" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="780,3638" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="780,4221" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1557,7 +1557,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="742,3410" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="742,3993" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1574,15 +1574,15 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeWorkflowFile>
-                                      <If Condition="[SystemException Is Nothing AndAlso TotalCompletedCases &gt; 0]" sap:VirtualizedContainerService.HintSize="680,3146" sap2010:WorkflowViewState.IdRef="If_16">
+                                      <If Condition="[SystemException Is Nothing AndAlso TotalCompletedCases &gt; 0]" sap:VirtualizedContainerService.HintSize="680,3729" sap2010:WorkflowViewState.IdRef="If_16">
                                         <If.Then>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="646,1885" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="646,2468" sap2010:WorkflowViewState.IdRef="Sequence_55">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Sequence DisplayName="Updating master report" sap:VirtualizedContainerService.HintSize="604,1139" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                            <Sequence DisplayName="Updating master report" sap:VirtualizedContainerService.HintSize="604,1722" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1619,10 +1619,10 @@
                                                   </scg:List>
                                                 </ui:MultipleAssign.AssignOperations>
                                               </ui:MultipleAssign>
-                                              <ui:RetryScope DisplayName="Update Report file" sap:VirtualizedContainerService.HintSize="542,810" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="5" RetryInterval="00:00:03">
+                                              <ui:RetryScope DisplayName="Update Report file" sap:VirtualizedContainerService.HintSize="542,1393" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="5" RetryInterval="00:00:03">
                                                 <ui:RetryScope.ActivityBody>
                                                   <ActivityAction>
-                                                    <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="500,521" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                    <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="500,1104" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1636,7 +1636,7 @@
                                                           <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                                                         </Assign.Value>
                                                       </Assign>
-                                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,288" sap2010:WorkflowViewState.IdRef="TryCatch_15">
+                                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,871" sap2010:WorkflowViewState.IdRef="TryCatch_15">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1644,7 +1644,7 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <TryCatch.Try>
-                                                          <uga:WriteRowConnections ArrayRow="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DataRow="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="6fd82878-44d7-43f4-bbf0-a01d6fb2942c" DataType="IndividualFields" DisplayName="Update Master report" HasHeaders="True" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="WriteRowConnections_4" ItemSelectionMode="UrlOrId" ManualEntrySpreadsheetId="[Config(&quot;GDriveMasterReportID&quot;).ToString]" Range="Sheet1" RowPosition="0" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+                                                          <uga:WriteRowConnections ArrayRow="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DataRow="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="6fd82878-44d7-43f4-bbf0-a01d6fb2942c" DataType="IndividualFields" DisplayName="Update Master report" HasHeaders="True" sap:VirtualizedContainerService.HintSize="334,643" sap2010:WorkflowViewState.IdRef="WriteRowConnections_4" ItemSelectionMode="UrlOrId" ManualEntrySpreadsheetId="[Config(&quot;GDriveMasterReportID&quot;).ToString]" Range="Sheet1" RowPosition="0" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
                                                             <uga:WriteRowConnections.AllFields>
                                                               <x:Array Type="ugsc:IRangeField">
                                                                 <ugsmc:RangeColumn DisplayName="Column 1" Guid="3ce86b4a-3c64-432c-a4b3-a80821fb3a1b" Name="Column 1">
@@ -1817,7 +1817,7 @@
                                                                   <scg:List x:TypeArguments="uga:DynamicField" Capacity="5">
                                                                     <uga:DynamicField Id="3ce86b4a-3c64-432c-a4b3-a80821fb3a1b" Name="dynamicField_AddRangeProperty_20">
                                                                       <uga:DynamicField.ArgumentValue>
-                                                                        <InArgument x:TypeArguments="x:Object">[DateTime.Now.ToString]</InArgument>
+                                                                        <InArgument x:TypeArguments="x:Object">[System.DateTime.Now.ToString("M/d/yyyy")]</InArgument>
                                                                       </uga:DynamicField.ArgumentValue>
                                                                     </uga:DynamicField>
                                                                     <uga:DynamicField Id="9744c206-712f-41fd-b48e-f8b79e3f92d4" Name="dynamicField_AddRangeProperty_21">
@@ -1846,7 +1846,7 @@
                                                             </uga:WriteRowConnections.State>
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
