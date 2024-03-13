@@ -5,7 +5,7 @@
     <x:Property Name="out_Remarks" Type="OutArgument(x:String)" />
     <x:Property Name="out_BizExcpt" Type="OutArgument(x:Boolean)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1353,6969</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1874,6889</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,7 +108,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add Stagnant Carrier comment" sap:VirtualizedContainerService.HintSize="1363,6904" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="Add Stagnant Carrier comment" sap:VirtualizedContainerService.HintSize="1363,6824" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="CarrierCode" />
       <Variable x:TypeArguments="x:String" Name="CarrierName" />
@@ -159,13 +159,13 @@
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
     <ui:LogMessage DisplayName="Loggin Carrier code for reference" sap:VirtualizedContainerService.HintSize="1301,141" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Started processing transaction with carrier code: &quot; + CarrierCode]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Working on Truck Entry Page" sap:VirtualizedContainerService.HintSize="1301,6363" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Working on Truck Entry Page" sap:VirtualizedContainerService.HintSize="1301,6283" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1267,6146" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1267,6066" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="SelectorCarrierCode" />
             </Sequence.Variables>
@@ -175,7 +175,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check if Truck Entry page is already open" sap:VirtualizedContainerService.HintSize="1205,515" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Timeout="10" Version="V3">
+            <uix:NCheckState DisplayName="Check if Truck Entry page is already open" sap:VirtualizedContainerService.HintSize="1205,475" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -272,7 +272,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Enter Carrier Code in search bar" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1205,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Text="[CarrierCode + &quot;[k(Enter)]&quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="3" DisplayName="Enter Carrier Code in search bar" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1205,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Text="[CarrierCode + &quot;[k(Enter)]&quot;]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvElementArea="2352, 180, 170, 31" CvType="InputBox" DesignTimeRectangle="2354, 186, 167, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT CarrierSearchText'" FullSelectorArgument="&lt;webctrl id='CarrierSearchText' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='CarrierSearchText' tag='INPUT' type='text' class='md-text-field md-text-field--margin md-full-width md-text carrier-search-text' aaname='' /&gt;" Guid="69261bfb-96cb-4377-a2e7-e63b5d92f83c" InformativeScreenshot="49f73ca615994517fe7d9002a0e0c94a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -283,7 +283,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NCheckState DisplayName="Check if no results window appears" sap:VirtualizedContainerService.HintSize="1205,52" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check if no results window appears" sap:VirtualizedContainerService.HintSize="1205,52" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="541,729" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>
@@ -374,7 +374,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ModifyText>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Selecting the correct option" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Selecting the correct option" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="1609, 218, 227, 15" CvTextArgument="(235BRON1) - 2359234 ONTARIO INC" CvType="Text" DesignTimeRectangle="1593, 166, 315, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'(235BRON1)-2359234 ONTA…'" FullSelectorArgument="&lt;webctrl aria-role='button' idx='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' type='' tag='DIV' class='md-fake-btn md-pointer--hover md-fake-btn--no-outline md-list-tile md-text' aaname='' /&gt;" Guid="00673970-5fbe-490f-a2a1-4bc0c7467c45" InformativeScreenshot="1e91b8dbd4ba447a284d127ec0215f07.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -388,10 +388,10 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -572,7 +572,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:IfElseIf>
-            <Sequence DisplayName="Adding audit comment " sap:VirtualizedContainerService.HintSize="1205,1550" sap2010:WorkflowViewState.IdRef="Sequence_30">
+            <Sequence DisplayName="Adding audit comment " sap:VirtualizedContainerService.HintSize="1205,1510" sap2010:WorkflowViewState.IdRef="Sequence_30">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -598,7 +598,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Limit has to be sent. Entering 0.0&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Limit has to be set. Entering 0.0&quot;]" />
                     <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'flag'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Text="0" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvElementArea="1457, 787, 123, 28" CvType="InputBox" DesignTimeRectangle="1459, 791, 121, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT contact-editor-fo…'" FullSelectorArgument="&lt;webctrl id='contact-editor-form-general-limit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='contact-editor-form-general-limit' tag='INPUT' type='text' class='md-text-field md-text-field--floating-margin md-full-width md-text' aaname='Limit*' /&gt;" Guid="41013c03-591b-4d52-bcd8-c9055c956610" InformativeScreenshot="f6db8ebe7c124baa11d55ec5e17a95d1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
@@ -637,7 +637,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NCheckState>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="3" DisplayName="Click on Submit button" sap:VirtualizedContainerService.HintSize="1143,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="3" DelayBefore="1" DisplayName="Click on Submit button" sap:VirtualizedContainerService.HintSize="1143,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://xlr8.arrivelogistics.com/#/truck-entry" CvTextArea="1723, 1102, 49, 12" CvTextArgument="SUBMIT" CvType="Text" DesignTimeRectangle="1716, 1091, 64, 36" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl aaname='Submit' parentid='modal-confirmation' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Submit' parentid='modal-confirmation' tag='BUTTON' type='button' class='md-btn md-btn--flat md-btn--text md-pointer--hover md-text md-inline-block md-btn--dialog button__confirm' check:innerText='SUBMIT' /&gt;" Guid="b057df76-84df-4ad3-a4db-9dbcf4a23e6e" InformativeScreenshot="4c681cce71a4e0e3d301ebfa2bd1f882.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Truck Entry' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -648,7 +648,7 @@
                   </uix:TargetAnchorable>
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NCheckState DisplayName="Check if confirmation prompt appears" sap:VirtualizedContainerService.HintSize="1143,888" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Timeout="5" Version="V3">
+              <uix:NCheckState DisplayName="Check if confirmation prompt appears" sap:VirtualizedContainerService.HintSize="1143,848" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="5a3dd694-84f9-4d6b-9af5-4caed988b5b4" Timeout="5" Version="V3">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_32">
                     <sap:WorkflowViewStateService.ViewState>
@@ -656,7 +656,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Process executed succesfully&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Process executed successfully&quot;]" />
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
