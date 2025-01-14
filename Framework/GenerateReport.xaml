@@ -231,7 +231,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GenerateReport" sap:VirtualizedContainerService.HintSize="1259,3952" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GenerateReport" sap:VirtualizedContainerService.HintSize="1259,4149" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[new system.Data.DataTable]" Name="dtReportTable" />
       <Variable x:TypeArguments="x:String" Name="ReportFromTime" />
@@ -258,6 +258,13 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="637,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Reporting started&quot;]" />
     <ui:BuildDataTable DataTable="[dtReportTable]" DisplayName="Build Data Table - Report dt" sap:VirtualizedContainerService.HintSize="637,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Execution_x0020_Date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;CarrierCode&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CarrierName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Remarks&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" DataTable="[dtReportTable]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="637,112" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[dtReportTable]" SortOrder="Ascending">
+      <ui:SortDataTable.ColumnIndex>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
+        </InArgument>
+      </ui:SortDataTable.ColumnIndex>
+    </ui:SortDataTable>
     <Assign DisplayName="Initialize Dynamic dt" sap:VirtualizedContainerService.HintSize="637,114" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dtDynamicTable]</OutArgument>
@@ -287,16 +294,16 @@
         <InArgument x:TypeArguments="s:DateTime">[Convert.ToDateTime(ReportFromTime)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InterruptibleDoWhile CurrentIndex="[index]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="637,570" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="[index]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="637,543" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,424" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,397" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:GetQueueItems Duration="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="Shared" From="[dmtFromReportTime]" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="Failed, Successful" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[QueueItem]" Skip="[intSkip*100]" Top="100" />
-          <If Condition="[TotalQueueItem is Nothing]" DisplayName="If - first iteration" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[TotalQueueItem is Nothing]" DisplayName="If - first iteration" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="If_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -389,7 +396,7 @@
                       </ui:InvokeWorkflowFile>
                       <ui:MergeDataTable Destination="[dtReportTable]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="382,156" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[dtDynamicTable]" />
                     </Sequence>
-                    <Sequence x:Key="failed" sap:VirtualizedContainerService.HintSize="416,295" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <Sequence x:Key="failed" sap:VirtualizedContainerService.HintSize="416,305" sap2010:WorkflowViewState.IdRef="Sequence_9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -436,6 +443,13 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="637,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Total processed QueueItems in report - &quot;+ dtReportTable.RowCount.ToString]" />
+    <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" DataTable="[dtReportTable]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="637,112" sap2010:WorkflowViewState.IdRef="SortDataTable_2" Order="Ascending" OutputDataTable="[dtReportTable]" SortOrder="Ascending">
+      <ui:SortDataTable.ColumnIndex>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
+        </InArgument>
+      </ui:SortDataTable.ColumnIndex>
+    </ui:SortDataTable>
     <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="637,1147" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
